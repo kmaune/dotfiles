@@ -17,9 +17,11 @@ set textwidth=80    " wrap lines at 80 chars
 " configure colors
 set t_Co=256        " use 256 terminal colors
 syntax on           " turn syntax highlighting on
-" colorscheme desert  " set colorscheme
-colorscheme jellybeans  " set colorscheme
-" colorscheme inkpot  " set colorscheme
+set background=dark
+"colorscheme jellybeans  " set colorscheme
+colorscheme gruvbox
+
+
 
 " misc options
 set showmatch       " highlight matching braces
@@ -61,38 +63,54 @@ map <F4> :e %:p:s,.hpp$,.X123X,:s,.cpp$,.hpp,:s,.X123X$,.cpp,<CR>
 map <F5> :e %:p:s,.H$,.X123X,:s,.C$,.H,:s,.X123X$,.C,<CR>
 
 " START -- Added based on Developer vim setup wiki: https://cqs-wiki.citadelgroup.com/display/DT/VIM
-let nix_share = '/auto/mm_coretech/devtools/devtools-stable/share/'
-let plugin_dir = nix_share . 'vim-packages/'
-
+let mm_share = '/auto/mm_coretech/devtools/devtools-stable/share/'
+let mm_plugin_dir = mm_share . 'vim-packages/'
 set encoding=utf-8 "Added for the  YouCompleteMe plugin below, get error without this
 
+let nix_share = '/nix/linux-tools/23.11/default/share/'
+let nix_plugin_dir = nix_share . 'vim-plugins/'
+
+" Github Copilot setup
+let g:copilot_proxy = 'http://proxy.gtm.citadelgroup.com:80/'
+let local_config_dir = '~/.config/vim/'
+let local_plugin_dir = local_config_dir . 'plugins/'
+
+" for vim-polyglot, per Github 
+set nocompatible
+
 call plug#begin()
- 
 " Plug plugin_dir . PLUGIN_NAME
- Plug plugin_dir . 'YouCompleteMe'
+ Plug mm_plugin_dir . 'YouCompleteMe'
  let g:ycm_show_diagnostics_ui = 0 " Turn off highlighting for semantic analysis
  let g:ycm_enable_diagnostic_signs = 0
  let g:ycm_global_ycm_extra_conf = '~/.vim/bazel_ycm_conf/ycm_extra_conf.py'
-
- Plug plugin_dir . 'vim-fugitive'
-
- Plug plugin_dir . 'vim-clang-format'
  
+ "Plug mm_plugin_dir . 'vim-fugitive'
+ "Plug mm_plugin_dir . 'vim-clang-format'
+  Plug nix_plugin_dir . 'vim-fugitive'
+  Plug nix_plugin_dir . 'vim-clang-format'
+
+  Plug nix_share . 'vim-plugins/fzf'
+  Plug nix_plugin_dir . 'fzf.vim'
+  "Plug nix_plugin_dir . 'vim-polyglot'
+
+  " Copilot setup
+  Plug local_plugin_dir . 'copilot.vim-1.22.0'
+
 call plug#end()
 " END changes from wiki
+
+" Setup FZF keybindings
+nnoremap fs :FZF<CR>
 
 
 " Setup Termdebug command 
 packadd! termdebug
 let g:termdebug_wide = 1
 
-" Github Copilot setup
-let g:copilot_proxy = 'http://proxy.gtm.citadelgroup.com:80/'
-let local_config_dir = '~/.config/vim/'
-let local_plugin_dir = local_config_dir . 'plugins/'
-call plug#begin()
-Plug local_plugin_dir . 'copilot.vim-1.22.0'
-call plug#end()
-
+" Setup Copilot keybindings
+let g:copilot_no_tab_map = 1
+" Map control space to accept copilot suggestion
+inoremap <expr> <C-Space> copilot#Accept()
 
 
