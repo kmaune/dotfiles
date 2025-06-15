@@ -18,7 +18,7 @@ cd ~/dotfiles
 - **Tmux**: Terminal multiplexer with custom themes and key bindings
 - **Git**: Global git configuration and aliases
 - **Aider**: AI pair programming assistant with hybrid local/cloud model support
-- **Scripts**: Utility scripts for development workflows (as git submodule)
+- **Scripts**: Utility scripts for development workflows including HTTPS-enabled OpenWebUI (as git submodule)
 - **Conda environments**: Predefined environments for development work
 - **Homebrew packages**: System package management with backup/restore functionality
 
@@ -97,7 +97,7 @@ This repo includes two installation scripts for different use cases:
 │   ├── lua/                # Lua configuration modules
 │   └── README.md           # Neovim-specific documentation
 ├── scripts/                 # Utility scripts (git submodule)
-│   ├── openwebui/          # OpenWebUI management scripts
+│   ├── openwebui/          # OpenWebUI with HTTPS and mobile voice mode support
 │   └── *.sh                # Various utility scripts
 ├── ssh/                     # SSH configuration management
 │   ├── config              # SSH client configuration
@@ -143,6 +143,17 @@ The `scripts/` directory is a git submodule pointing to a separate repository. T
 1. **Edit scripts locally**: Make changes in `~/dotfiles/scripts/`
 2. **Push to scripts repo**: Commit and push changes directly to the scripts repository
 3. **Update dotfiles reference**: Update the dotfiles repo to point to new script versions
+
+### OpenWebUI with HTTPS
+
+The scripts include a complete OpenWebUI setup with HTTPS support for mobile voice mode:
+
+- **HTTPS Access**: Secure connection enables mobile browser voice input
+- **Automated Certificates**: Tailscale-generated SSL certificates with auto-renewal
+- **Service Management**: Start, stop, and monitor OpenWebUI stack
+- **Mobile Voice Mode**: Dictate messages using your phone's microphone
+
+For detailed setup and usage, see `scripts/openwebui/README.md`.
 
 ### Updating Scripts
 
