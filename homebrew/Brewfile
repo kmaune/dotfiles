@@ -8,6 +8,10 @@ brew "cmake"
 brew "fzf"
 # GNU debugger
 brew "gdb"
+# C++ microbenchmark support library
+brew "google-benchmark"
+# Google Testing and Mocking Framework
+brew "googletest"
 # Improved top (interactive process viewer)
 brew "htop"
 # Ambitious Vim-fork focused on extensibility and agility
@@ -22,9 +26,17 @@ brew "ripgrep"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Menu bar manager
+cask "jordanbaird-ice"
 # Mesh VPN based on WireGuard
-cask "tailscale"
+cask "tailscale-app"
+vscode "anysphere.cursorpyright"
+vscode "anysphere.remote-ssh"
+vscode "matepek.vscode-catch2-test-adapter"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
 vscode "ms-vscode.cmake-tools"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.cpptools-extension-pack"
 vscode "ms-vscode.cpptools-themes"
+vscode "twxs.cmake"
