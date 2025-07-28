@@ -1,0 +1,180 @@
+# Global Claude Code Configuration
+# Optimized for high-performance C++ development and multi-project workflows
+
+# Context Management
+context:
+  max_tokens: 200000              # Large context for complex systems
+  auto_save_context: true         # Preserve context across sessions
+  context_compression: true       # Efficient context usage
+  
+# Model Preferences
+models:
+  primary: "claude-sonnet-4"      # Claude Sonnet 4 (latest)
+  fallback: "claude-3-5-sonnet"   # Fallback to previous generation
+  thinking_mode: "think hard"          # Default thinking budget ("think" | "think hard" | "think harder" | "ultrathink")
+  
+# Tool Configuration
+tools:
+  # Enable all core tools by default
+  enabled:
+    - file_read
+    - file_write
+    - bash
+    - git
+    - grep
+    - edit_tool
+  
+  # Tool-specific settings
+  bash:
+    timeout: 300                  # 5 minute timeout for long operations
+    allow_sudo: false             # Disable sudo for safety
+    
+  git:
+    auto_commit: false            # Manual control over commits (recommended for HFT)
+    auto_stage: false             # Don't auto-stage files
+    suggest_commits: true         # Claude can suggest when to commit
+    commit_message_style: "conventional"  # Conventional commit format
+    auto_push: false              # Never auto-push
+    
+  file_operations:
+    backup_on_edit: true          # Create backups before major edits
+    max_file_size: "10MB"         # Limit file size for safety
+
+# Agent Coordination
+agents:
+  auto_selection: true            # Enable automatic agent selection
+  parallel_agents: 3              # Max concurrent agents for complex tasks
+  agent_timeout: 600              # 10 minute timeout per agent
+  
+  # Agent priority for automatic selection
+  priority_agents:
+    - "principal-code-reviewer"    # High priority for general code changes
+    - "cpp-code-reviewer"          # High priority for C++ specific review
+    - "hft-code-reviewer"          # High priority for HFT code review
+    - "cpp-performance-expert"     # High priority for C++ optimization
+    - "hft-systems-architect"      # High priority for trading systems
+    
+# Performance Settings
+performance:
+  # Latency optimization
+  response_streaming: true        # Stream responses for faster feedback
+  concurrent_operations: true     # Enable parallel file operations
+  cache_results: true             # Cache expensive operations
+  
+  # Resource management
+  memory_limit: "8GB"             # Memory limit for operations
+  max_concurrent_files: 50        # Limit concurrent file operations
+  
+# Project Detection
+project_detection:
+  # Automatically detect project types and apply appropriate settings
+  cpp_projects:
+    indicators: ["CMakeLists.txt", "*.cpp", "*.hpp", "Makefile"]
+    auto_agents: ["cpp-code-reviewer", "cpp-performance-expert"]
+    
+  hft_projects:
+    indicators: ["hft", "trading", "latency", "benchmark"]
+    auto_agents: ["hft-code-reviewer", "hft-systems-architect", "cpp-performance-expert"]
+    
+  python_projects:
+    indicators: ["requirements.txt", "pyproject.toml", "setup.py"]
+    auto_agents: ["principal-code-reviewer"]
+
+# Development Workflow
+workflow:
+  # Testing integration
+  auto_run_tests: true            # Run tests after code changes
+  test_frameworks:
+    cpp: ["gtest", "catch2"]
+    python: ["pytest", "unittest"]
+    
+  # Performance monitoring
+  auto_benchmark: false           # Don't auto-run benchmarks (too expensive)
+  performance_regression_check: true  # Check for performance regressions
+  
+  # Code quality
+  auto_format: true               # Auto-format code when possible
+  lint_on_save: true              # Run linters automatically
+  
+# Security Settings
+security:
+  # File access restrictions
+  restricted_paths:
+    - "/etc"
+    - "/var"
+    - "/usr/bin"
+    - "/System"                   # macOS system directories
+    
+  # Command restrictions
+  blocked_commands:
+    - "rm -rf"
+    - "sudo rm"
+    - "format"
+    - "dd"
+    
+  # Data protection
+  redact_secrets: true            # Automatically redact API keys, passwords
+  no_external_requests: false     # Allow external requests (for package management)
+
+# Logging and Monitoring
+logging:
+  level: "INFO"                   # Log level (DEBUG, INFO, WARN, ERROR)
+  log_file: "~/.claude/logs/claude.log"
+  max_log_size: "100MB"
+  log_rotation: true
+  
+  # Performance tracking
+  track_latency: true             # Track operation latencies
+  track_token_usage: true         # Monitor token consumption
+  
+# UI/UX Preferences
+interface:
+  # Terminal settings
+  color_output: true              # Colored terminal output
+  progress_indicators: true       # Show progress for long operations
+  confirm_destructive: true       # Confirm dangerous operations
+  
+  # Output formatting
+  code_syntax_highlighting: true  # Syntax highlighting in output
+  markdown_rendering: true        # Render markdown in terminal
+  
+# Integration Settings
+integrations:
+  # IDE integration
+  vscode_integration: true        # VS Code integration when available
+  cursor_integration: true        # Cursor IDE integration
+  
+  # External tools
+  enable_mcp: true                # Enable Model Context Protocol
+  dotfiles_awareness: true        # Be aware of dotfiles structure
+  
+# Custom Aliases
+aliases:
+  # Workflow shortcuts
+  review: "git-pr-review"         # Quick PR review
+  audit: "performance-audit"      # Performance audit
+  benchmark: "setup-benchmarks"   # Add benchmarking
+  new-project: "new-cpp-project"  # New C++ project
+  
+  # Agent shortcuts
+  arch: "Use principal-systems-architect"        # General systems architect
+  hft-arch: "Use hft-systems-architect"          # HFT systems architect
+  perf: "Use cpp-performance-expert"             # C++ performance expert
+  mentor: "Use cpp-mentor"                       # C++ mentor/educator
+  review-code: "Use principal-code-reviewer"     # General code reviewer
+  cpp-review: "Use cpp-code-reviewer"            # C++ specialized reviewer
+  hft-review: "Use hft-code-reviewer"            # HFT specialized reviewer
+
+# Environment-Specific Overrides
+environments:
+  development:
+    thinking_mode: "think hard"    # More thinking in development
+    auto_commit: false             # Manual commits in dev
+    
+  production:
+    thinking_mode: "think"         # Faster responses in production
+    auto_commit: false             # Never auto-commit in production
+    
+  ci_cd:
+    thinking_mode: "think"         # Fast responses in CI
+    auto_agents: ["principal-code-reviewer"]  # Only code review in CI
