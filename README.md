@@ -18,6 +18,7 @@ cd ~/dotfiles
 - **Tmux**: Terminal multiplexer with custom themes and key bindings
 - **Git**: Global git configuration and aliases
 - **Aider**: AI pair programming assistant with hybrid local/cloud model support
+- **Claude Code**: AI assistant with 9 specialized agents for C++ and HFT development
 - **Scripts**: Utility scripts for development workflows including HTTPS-enabled OpenWebUI (as git submodule)
 - **Conda environments**: Predefined environments for development work
 - **Homebrew packages**: System package management with backup/restore functionality
@@ -72,6 +73,14 @@ This repo includes two installation scripts for different use cases:
 │   ├── aiderignore         # Files/patterns for Aider to ignore
 │   ├── setup_aider.sh      # Aider setup script
 │   └── README.md           # Aider-specific documentation
+├── claude/                  # Claude Code AI assistant configuration
+│   ├── agents/             # Specialized AI agents (9 total)
+│   ├── commands/           # Custom workflow commands (4 total)
+│   ├── settings.json       # Claude Code configuration
+│   ├── CLAUDE.md          # Global context for HFT development
+│   ├── .claudeignore      # Files/patterns for Claude to ignore
+│   ├── setup_claude.sh    # Claude Code setup script
+│   └── README.md          # Claude Code documentation
 ├── envs/                    # Conda environment definitions
 │   ├── ai_env.yml          # AI/ML development environment
 │   ├── base.yml            # Base development environment
@@ -333,7 +342,18 @@ git push
    export OPENROUTER_API_KEY="your-key-here"
    ```
 
-5. **Customize personal settings**:
+5. **Set up Claude Code (optional)**:
+   ```bash
+   # Install Claude Code
+   npm install -g @anthropic-ai/claude-code
+   # or
+   brew install claude-code
+   
+   # Setup is automatic via install scripts
+   # Access 9 specialized agents and 4 workflow commands
+   ```
+
+6. **Customize personal settings**:
    ```bash
    # Add personal Homebrew packages
    ./homebrew/backup_brew.sh personal
