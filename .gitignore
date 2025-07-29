@@ -22,3 +22,10 @@ ssh/id_*
 # Homebrew - Keep personal packages private
 homebrew/Brewfile.personal
 homebrew/Brewfile.backup.*
+
+# Claude Code internal data (runtime generated)
+claude/projects/
+claude/shell-snapshots/
+claude/statsig/
+claude/todos/
+
