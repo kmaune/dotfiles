@@ -1,79 +1,79 @@
 # Claude Code Global Context
 
 ## Development Focus
-Primary focus on **High-Frequency Trading (HFT)** and **ultra-low latency systems** development.
+General **modern C++ development** with emphasis on code quality, maintainability, and performance best practices.
 
 ## Programming Languages & Standards
-- **C++20/23**: Primary language with modern standards
-- **Performance-critical code**: Every microsecond matters
-- **Memory management**: Manual optimization preferred over automatic
-- **SIMD operations**: AVX2/AVX-512 for computational hotpaths
+- **C++17/20/23**: Modern C++ standards with feature adoption as appropriate
+- **Performance awareness**: Write efficient code without premature optimization
+- **Memory safety**: Prefer smart pointers and RAII over manual memory management
+- **Standard library**: Leverage STL algorithms, containers, and utilities
 
 ## Code Quality Standards
-- **Zero-cost abstractions**: Template metaprogramming over runtime polymorphism  
-- **Cache-friendly design**: Data locality and memory access patterns critical
-- **Branchless code**: Avoid conditionals in hot paths
-- **Compile-time computation**: `constexpr` and template specialization preferred
+- **Modern C++ idioms**: Use standard library features and modern patterns
+- **Clear abstractions**: Prefer readable code over micro-optimizations
+- **const correctness**: Immutable by default where possible
+- **Exception safety**: Follow RAII principles for resource management
 
 ## Build System & Tools
-- **CMake**: Primary build system
-- **Vim**: Preferred editor for development
-- **GCC/Clang**: Both supported, aggressive optimization flags
-- **Intel VTune/perf**: Profiling and performance analysis
+- **CMake**: Primary build system for cross-platform compatibility
+- **Vim/Neovim**: Preferred editor with LSP integration
+- **GCC/Clang**: Modern compiler support with appropriate warning levels
+- **Standard tooling**: gdb, valgrind, sanitizers for debugging and analysis
 
 ## Testing & Quality Assurance
-- **GoogleTest**: Unit testing framework
-- **Benchmark libraries**: Performance regression testing
-- **Static analysis**: clang-tidy, cppcheck
-- **Sanitizers**: AddressSanitizer, ThreadSanitizer for debug builds
+- **GoogleTest/Catch2**: Unit testing frameworks
+- **Test-driven development**: Write tests for new functionality
+- **Static analysis**: clang-tidy, cppcheck for code quality
+- **Sanitizers**: AddressSanitizer, UBSanitizer for safety checks
 
-## Performance Optimization Priorities
-1. **Latency reduction**: Target sub-microsecond execution times
-2. **Memory bandwidth**: Minimize cache misses and memory stalls
-3. **Branch prediction**: Optimize hot path branching patterns
-4. **Lock-free algorithms**: Prefer atomic operations over mutexes
-5. **NUMA awareness**: Consider memory locality in multi-socket systems
+## Performance Philosophy
+1. **Correctness first**: Get it working correctly, then optimize if needed
+2. **Measure before optimizing**: Profile to identify actual bottlenecks
+3. **Algorithmic efficiency**: Choose appropriate data structures and algorithms
+4. **Memory awareness**: Understand allocation patterns and lifetimes
+5. **Standard library**: Leverage optimized standard algorithms
 
 ## Code Review Standards
-- **Performance impact analysis**: Every change evaluated for latency implications
-- **Assembly review**: Critical paths reviewed at assembly level
-- **Memory layout**: Struct packing and alignment verification
-- **Compiler output**: Verify optimization effectiveness
+- **Readability**: Code should be self-documenting with clear intent
+- **Safety**: Check for memory safety, exception safety, and edge cases
+- **API design**: Evaluate interfaces for usability and maintainability
+- **Testing**: Ensure adequate test coverage for new code
+- **Performance**: Consider performance implications of design choices
 
 ## Project Structure Conventions
-- `src/`: Source files with performance-critical implementations
-- `include/`: Headers with extensive template specializations  
-- `benchmarks/`: Microbenchmarks for performance validation
-- `tests/`: Unit tests with performance assertions
-- `cmake/`: Build configuration and optimization flags
+- `src/`: Source files organized by functional modules
+- `include/`: Public headers with clear API boundaries
+- `tests/`: Unit tests mirroring source structure
+- `cmake/`: Build configuration and find modules
+- `docs/`: Documentation and design documents
 
-## Runtime Environment
-- **Linux**: Target deployment environment
-- **Real-time scheduling**: SCHED_FIFO for critical threads
-- **CPU isolation**: Dedicated cores for trading logic
-- **Memory locking**: mlockall() to prevent page swaps
-- **DPDK**: User-space network stack for minimal latency
+## Development Environment
+- **Cross-platform**: Code should work on Linux, macOS, and Windows
+- **Standard tooling**: Use widely available tools and libraries
+- **Version control**: Git with clear commit messages and branching strategy
+- **CI/CD**: Automated testing and builds where applicable
 
 ## Documentation Standards
-- **Performance annotations**: Document complexity and expected performance
-- **Hot path identification**: Mark critical execution paths
-- **Optimization rationale**: Explain non-obvious performance choices
-- **Benchmark results**: Include before/after performance data
+- **API documentation**: Document public interfaces and usage examples
+- **Design decisions**: Explain architectural choices and trade-offs
+- **Build instructions**: Clear setup and build process documentation
+- **Code comments**: Explain "why" not "what" in complex sections
 
 ## Dependencies & Libraries
-- **Minimal external dependencies**: Reduce linking and loading overhead
-- **Header-only libraries**: Prefer compile-time over runtime dependencies
-- **Custom allocators**: Pool allocators for predictable memory patterns
-- **Boost**: Limited usage, prefer standard library alternatives
+- **Standard library first**: Prefer STL over external dependencies
+- **Established libraries**: Use well-maintained, widely-adopted libraries
+- **Dependency management**: Use modern tools like Conan or vcpkg where appropriate
+- **Version pinning**: Specify library versions for reproducible builds
 
 ## Debugging & Profiling
-- **Debug vs Release**: Significant behavior differences expected
-- **Profiling builds**: Special optimization flags for profiling accuracy
-- **Hardware counters**: Leverage PMU events for detailed analysis
-- **Flame graphs**: Primary visualization for performance bottlenecks
+- **Debug builds**: Full symbol information and minimal optimization
+- **Logging**: Structured logging with appropriate levels
+- **Profiling tools**: Use perf, Instruments, or Visual Studio profiler as needed
+- **Memory debugging**: Regular use of sanitizers and static analysis
 
 ## Security Considerations
-- **Time-constant operations**: Prevent timing-based information leakage
-- **Input validation**: Critical for market data parsing
-- **Memory safety**: Bounds checking in non-performance-critical code
-- **Audit trails**: Comprehensive logging for compliance
+- **Input validation**: Validate all external inputs and data
+- **Memory safety**: Use modern C++ features to prevent buffer overflows
+- **Secure coding**: Follow established secure coding practices
+- **Dependency security**: Keep dependencies updated and scan for vulnerabilities

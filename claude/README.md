@@ -1,6 +1,6 @@
 # Claude Code Integration
 
-Claude Code AI assistant integration for the dotfiles repository, providing specialized agents and commands for C++ and HFT development.
+Claude Code AI assistant integration for the dotfiles repository, providing specialized agents and commands for C++ development.
 
 ## Quick Start
 
@@ -9,14 +9,8 @@ Claude Code AI assistant integration for the dotfiles repository, providing spec
 ./install.sh          # or ./safe_install.sh
 
 # Start Claude Code
-claude                 # Default session
-claude-sonnet         # Fast Claude 3.5 Sonnet
-claude-opus           # Thorough Claude 3 Opus  
-claude-auto           # Skip permission prompts
-
-# Show available options
-claude-models         # List all models and agents
-claude-help           # Same as claude-models
+claude                 # Start interactive session
+claude --help         # Show available options
 ```
 
 ## Features
@@ -28,7 +22,7 @@ claude-help           # Same as claude-models
 - **cpp-performance-expert** - C++ performance optimization
 - **git-workflow-helper** - Git operations and workflows
 - **hft-code-reviewer** - HFT and trading system reviews
-- **hft-systems-architect** - Ultra-low latency system design
+- **hft-systems-architect** - Low-latency system design
 - **principal-code-reviewer** - General code review
 - **principal-systems-architect** - High-level architecture
 
@@ -40,7 +34,7 @@ claude-help           # Same as claude-models
 
 ### 🔧 Configuration
 - **settings.json** - Core Claude Code settings with C++ optimizations
-- **CLAUDE.md** - Global context for HFT development focus
+- **CLAUDE.md** - Global context for C++ development
 - **.claudeignore** - Ignore patterns for build artifacts and large files
 
 ## Installation
@@ -66,15 +60,15 @@ brew install claude-code
 
 ### Model Selection
 ```bash
-claude-sonnet         # Claude 3.5 Sonnet (fast, recommended)
-claude-opus           # Claude 3 Opus (thorough, slower)
-claude-auto           # Skip permission prompts for automation
+claude --model claude-3-5-sonnet-20241022  # Claude 3.5 Sonnet (fast, recommended)
+claude --model claude-3-opus-20240229      # Claude 3 Opus (thorough, slower)
+claude --no-confirm                        # Skip permission prompts for automation
 ```
 
 ### Agent Management
 ```bash
-claude-agents         # List available agents
-nvim ~/.claude/agents/<agent>.md    # Edit specific agent
+ls ~/.claude/agents/                     # List available agents
+nvim ~/.claude/agents/<agent>.md         # Edit specific agent
 
 # Example: Edit the C++ code reviewer
 nvim ~/.claude/agents/cpp-code-reviewer.md
@@ -82,8 +76,8 @@ nvim ~/.claude/agents/cpp-code-reviewer.md
 
 ### Command Management  
 ```bash
-claude-commands       # List available commands
-nvim ~/.claude/commands/<command>.md    # Edit specific command
+ls ~/.claude/commands/                      # List available commands
+nvim ~/.claude/commands/<command>.md        # Edit specific command
 
 # Example: Edit the performance audit command
 nvim ~/.claude/commands/performance-audit.md
@@ -91,7 +85,7 @@ nvim ~/.claude/commands/performance-audit.md
 
 ### Configuration
 ```bash
-claude-config         # Edit main settings
+# Edit main settings
 nvim ~/dotfiles/claude/settings.json
 
 # Edit global context
@@ -108,7 +102,7 @@ claude/
 ├── README.md                 # This file
 ├── setup_claude.sh          # Setup script
 ├── settings.json            # Core configuration
-├── CLAUDE.md               # Global context for HFT development
+├── CLAUDE.md               # Global context for C++ development
 ├── .claudeignore           # Ignore patterns
 ├── agents/                 # Specialized AI agents (9 total)
 │   ├── cpp-code-reviewer.md
@@ -178,7 +172,7 @@ Use $ARGUMENTS to access command arguments.
 - **Single Purpose**: Each agent should have a focused, specific role
 - **Clear Tools**: Only request the tools the agent actually needs
 - **Detailed Instructions**: Provide comprehensive guidance for consistent behavior
-- **Performance Focus**: For HFT agents, emphasize latency and optimization
+- **Performance Focus**: For performance-critical agents, emphasize efficiency and best practices
 
 ### Command Development  
 - **Workflow Oriented**: Commands should automate common development workflows
@@ -236,7 +230,7 @@ chmod +x ~/dotfiles/claude/setup_claude.sh
 ### With Aider
 - Both tools can coexist and complement each other
 - Aider for local models, Claude Code for cloud models
-- Similar alias patterns: `aider-models` vs `claude-models`
+- Both use similar patterns for configuration and setup
 
 ### With Git
 - `git-workflow-helper` agent handles Git operations
@@ -260,8 +254,8 @@ cp ~/dotfiles/claude/settings.json .claude/
 
 ### Automation Scripts
 ```bash
-# Use claude-auto for CI/CD integration
-claude-auto --task "review changes since main"
+# Use --no-confirm for CI/CD integration
+claude --no-confirm --task "review changes since main"
 ```
 
 ### Custom Workflows

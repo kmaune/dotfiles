@@ -18,7 +18,7 @@ cd ~/dotfiles
 - **Tmux**: Terminal multiplexer with custom themes and key bindings
 - **Git**: Global git configuration and aliases
 - **Aider**: AI pair programming assistant with hybrid local/cloud model support
-- **Claude Code**: AI assistant with 9 specialized agents for C++ and HFT development
+- **Claude Code**: AI assistant with 9 specialized agents for C++ development
 - **Scripts**: Utility scripts for development workflows including HTTPS-enabled OpenWebUI (as git submodule)
 - **Conda environments**: Predefined environments for development work
 - **Homebrew packages**: System package management with backup/restore functionality
@@ -77,7 +77,7 @@ This repo includes two installation scripts for different use cases:
 │   ├── agents/             # Specialized AI agents (9 total)
 │   ├── commands/           # Custom workflow commands (4 total)
 │   ├── settings.json       # Claude Code configuration
-│   ├── CLAUDE.md          # Global context for HFT development
+│   ├── CLAUDE.md          # Global context for C++ development
 │   ├── .claudeignore      # Files/patterns for Claude to ignore
 │   ├── setup_claude.sh    # Claude Code setup script
 │   └── README.md          # Claude Code documentation
