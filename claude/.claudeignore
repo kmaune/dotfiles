@@ -1,1 +1,102 @@
-/Users/kmaune/dotfiles/claude/.claudeignore
+# Build artifacts and object files
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+compile_commands.json
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+*.lib
+*.dll
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Version control
+.git/
+.gitignore
+
+# Package managers and dependencies
+node_modules/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+target/
+.cache/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.temp
+core
+core.*
+
+# Large binary files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+*.iso
+*.dmg
+
+# Sensitive files
+*.key
+*.pem
+*.p12
+*.pfx
+*password*
+*secret*
+*token*
+.env
+.env.local
+
+# Performance and profiling data
+*.prof
+*.profile
+perf.data*
+cachegrind.out.*
+callgrind.out.*
+
+# Documentation build artifacts
+docs/_build/
+doc/_build/
+*.pdf
+*.epub
+
+# Test artifacts
+test_results/
+coverage/
+*.gcov
+*.lcov
+
+# Backup files
+*.bak
+*.backup
+*~
+
+# OS-specific files
+Thumbs.db
+Desktop.ini
+
+# Jupyter notebooks (processed versions)
+.ipynb_checkpoints/
+
+# Large media files
+*.mp4
+*.avi
+*.mov
+*.mkv
+*.mp3
+*.wav
+*.flac

@@ -20,13 +20,10 @@ echo "✓ Claude Code agents and commands linked"
 if command -v claude &> /dev/null; then
     echo "✓ Claude Code command available"
     
-    # Configure basic allowed tools
-    claude config set allowedTools '["file_read","file_write","bash","grep","glob","git","edit","multi_edit","read","write","ls","web_fetch","web_search"]'
-    echo "✓ Allowed tools configured"
-    
     # Check current configuration
     echo "Current Claude Code configuration:"
     claude config list
+    echo "✓ Configuration managed via settings.json"
 else
     echo "⚠️  Claude Code not found. Install with:"
     echo "   npm install -g @anthropic-ai/claude-code"
