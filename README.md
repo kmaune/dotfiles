@@ -281,6 +281,179 @@ nano ~/dotfiles/ssh/sshd_config.d/999-local.conf
 ~/dotfiles/ssh/setup_ssh.sh
 ```
 
+## Claude Code Integration
+
+Your dotfiles include a comprehensive Claude Code setup that provides AI-powered development assistance with specialized agents and custom workflows. This transforms Claude Code from a general assistant into a C++/HFT development partner.
+
+## Overview
+
+The `.claude/` directory provides Claude Code with project-specific context, specialized agents, custom commands, and configuration. This structure enables:
+
+- **Intelligent code understanding** through project context
+- **Specialized assistance** via domain-specific agents  
+- **Custom workflows** through reusable commands
+- **Optimized performance** through tailored configuration
+
+## Folder Structure
+
+```
+.claude/
+├── config.yaml         # Claude Code configuration
+├── .claudeignore        # Files/patterns to exclude
+├── agents/             # Specialized AI assistants
+├── commands/           # Reusable workflow commands
+└── CLAUDE.md           # Project context document
+```
+
+## 📁 `agents/` Directory
+
+**Purpose:** Contains specialized AI agents with domain expertise for specific tasks.
+
+**How Claude Code Uses It:**
+- Automatically suggests relevant agents based on your current task
+- Enables `@agent-name` invocation for specialized assistance
+- Provides deep domain knowledge beyond general programming help
+
+**Current Agents:**
+
+### `cpp-performance-expert.md`
+- **When used:** Performance optimization, profiling analysis, memory management
+- **Expertise:** Cache optimization, SIMD, lock-free programming, compiler tuning
+- **Example:** "Optimize this hot path for minimal latency"
+
+### `cpp-mentor.md` 
+- **When used:** Learning C++, design reviews, best practices guidance
+- **Expertise:** Modern C++ idioms, design patterns, code architecture
+- **Example:** "Review this class design for maintainability"
+
+### `hft-systems-architect.md`
+- **When used:** High-frequency trading system design and architecture
+- **Expertise:** Ultra-low latency systems, market data processing, risk management
+- **Example:** "Design a market data feed handler"
+
+### `cpp-code-reviewer.md`
+- **When used:** Code reviews with C++ focus
+- **Expertise:** C++ best practices, memory safety, performance implications
+- **Example:** Pull request reviews, code quality assessment
+
+### `principal-code-reviewer.md`
+- **When used:** General code reviews across languages
+- **Expertise:** Software engineering principles, architecture patterns
+- **Example:** Multi-language project reviews
+
+### `hft-code-reviewer.md`
+- **When used:** HFT-specific code reviews
+- **Expertise:** Trading system patterns, latency optimization, risk controls
+- **Example:** Trading algorithm reviews
+
+## 📁 `commands/` Directory
+
+**Purpose:** Reusable workflow commands that automate common development tasks.
+
+**How Claude Code Uses It:**
+- Enables `/command-name` execution for complex workflows
+- Provides step-by-step guidance for project setup and maintenance
+- Automates repetitive tasks with consistent patterns
+
+**Current Commands:**
+
+### `git-pr-review.md`
+- **Usage:** `/git-pr-review`
+- **Function:** Automated pull request review workflow
+- **Features:** Quality gates, security scanning, team coordination
+- **Example:** Comprehensive PR analysis with multiple specialist agents
+
+### `new-cpp-project.md`
+- **Usage:** `/new-cpp-project`
+- **Function:** Scaffold modern C++ projects with best practices
+- **Features:** CMake setup, testing framework, benchmarking, CI/CD
+- **Example:** Creates complete project structure with documentation
+
+### `performance-audit.md`
+- **Usage:** `/performance-audit`
+- **Function:** Systematic performance analysis and optimization
+- **Features:** Profiling setup, bottleneck identification, optimization recommendations
+- **Example:** End-to-end performance improvement workflow
+
+### `setup-benchmarks.md`
+- **Usage:** `/setup-benchmarks`
+- **Function:** Add comprehensive benchmarking to existing projects
+- **Features:** Google Benchmark integration, performance tracking
+- **Example:** Automated benchmark suite creation
+
+## 📁 Configuration Files
+
+### `config.yaml`
+**Purpose:** Global and project-specific Claude Code settings.
+
+**Key Configurations:**
+- **Model preferences:** Claude Sonnet 4 with fallback options
+- **Agent coordination:** Auto-selection and parallel processing
+- **Tool permissions:** File operations, git integration, bash access
+- **Performance settings:** Memory limits, concurrent operations
+- **Workflow automation:** Testing integration, commit patterns
+
+### `.claudeignore`
+**Purpose:** Exclude files/patterns from Claude Code analysis.
+
+**Common Exclusions:**
+- Build artifacts (`build/`, `dist/`, `*.o`)
+- Dependencies (`node_modules/`, `vendor/`)
+- Large data files (`*.csv`, `*.db`)
+- Security-sensitive files (`*.key`, `.env`)
+- Generated documentation (`docs/_build/`)
+
+### `CLAUDE.md`
+**Purpose:** Project-specific context and documentation for Claude Code.
+
+**Typical Contents:**
+- Project architecture overview
+- Build and deployment instructions
+- Performance requirements and constraints
+- Code style and contribution guidelines
+- Domain-specific terminology and concepts
+
+## 🔄 How Claude Code Uses These Folders
+
+### Automatic Agent Selection
+Claude Code analyzes your current task and suggests appropriate agents:
+```bash
+# Working on performance optimization
+claude code "optimize this function" 
+# → Automatically suggests @cpp-performance-expert
+
+# Reviewing a pull request
+claude code "review this PR"
+# → Suggests @cpp-code-reviewer or @hft-code-reviewer based on context
+```
+
+### Command Workflows
+Commands provide guided, multi-step workflows:
+```bash
+claude code "/new-cpp-project trading-engine"
+# → Walks through project setup with modern C++ best practices
+
+claude code "/git-pr-review"
+# → Comprehensive PR analysis with quality gates
+```
+
+### Context-Aware Assistance
+The configuration and context files help Claude Code understand:
+- Your project's specific requirements and constraints
+- Preferred tools and development patterns
+- Performance targets and architectural decisions
+- Team workflows and coding standards
+
+## 🚀 Getting Started
+
+1. **Use existing agents:** Try `@cpp-performance-expert` for optimization tasks
+2. **Run commands:** Execute `/new-cpp-project` for new projects
+3. **Customize config:** Modify `config.yaml` for your preferences
+4. **Add context:** Update `CLAUDE.md` with project-specific information
+5. **Create custom agents:** Add domain-specific expertise as needed
+
+This folder structure transforms Claude Code from a general assistant into a specialized development partner tailored to your C++/HFT workflow.
+
 ## Updating
 
 To update your dotfiles and all submodules:
