@@ -1,0 +1,46 @@
+{
+  "ignorePatterns": [
+    "**/build/**",
+    "**/cmake-build-*/**",
+    "**/.cache/**",
+    "**/node_modules/**",
+    "**/venv/**",
+    "**/env/**",
+    "**/__pycache__/**",
+    "**/*.pyc",
+    "**/*.pyo",
+    "**/target/**",
+    "**/*.o",
+    "**/*.a",
+    "**/*.so",
+    "**/*.dylib",
+    "**/*.exe",
+    "**/compile_commands.json",
+    "**/.vscode/**",
+    "**/.idea/**",
+    "**/CMakeFiles/**",
+    "**/CMakeCache.txt",
+    "**/*.log",
+    "**/core",
+    "**/core.*",
+    "**/.git/**",
+    "**/.DS_Store"
+  ],
+  "permissions": {
+    "allow": [
+      "file_read",
+      "file_write", 
+      "bash",
+      "grep",
+      "glob",
+      "git",
+      "edit",
+      "multi_edit",
+      "read",
+      "write",
+      "ls",
+      "web_fetch",
+      "web_search"
+    ]
+  }
+}
