@@ -78,6 +78,3 @@ alias aider-ignore='nvim ~/dotfiles/aider/.aiderignore'
 export FORCE_COLOR=0
 export NO_COLOR=1
 
-# direnv support 
-eval "$(direnv hook zsh)"
-
