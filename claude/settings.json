@@ -1,26 +1,4 @@
 {
-  "permissions": {
-    "allow": [
-      "File_read",
-      "File_write",
-      "Bash",
-      "Grep",
-      "Glob",
-      "Git",
-      "Edit",
-      "Multi_edit",
-      "Read",
-      "Write",
-      "Ls",
-      "Web_fetch",
-      "Web_search"
-    ]
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "printf '\\e[38;5;67m%s\\e[38;5;109m@\\e[38;5;108m%s \\e[38;5;150m%s\\e[0m ' \"$(whoami)\" \"$(hostname -s)\" \"$(basename \"$(pwd)\")\""
-  },
-  "alwaysThinkingEnabled": false,
   "ignorePatterns": [
     "**/build/**",
     "**/cmake-build-*/**",
@@ -47,5 +25,27 @@
     "**/core.*",
     "**/.git/**",
     "**/.DS_Store"
-  ]
+  ],
+  "permissions": {
+    "allow": [
+      "File_read",
+      "File_write",
+      "Bash",
+      "Grep",
+      "Glob",
+      "Git",
+      "Edit",
+      "Multi_edit",
+      "Read",
+      "Write",
+      "Ls",
+      "Web_fetch",
+      "Web_search"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+  "alwaysThinkingEnabled": false
 }
