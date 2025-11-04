@@ -1,30 +1,122 @@
-# Bourne-Again SHell, a UNIX command interpreter
-brew "bash"
-# Clone of cat(1) with syntax highlighting and Git integration
-brew "bat"
+tap "homebrew/cask"
+tap "homebrew/core"
+tap "homebrew/services"
+tap "o4dev/valgrind-mojave"
+# Cryptography and SSL/TLS Toolkit
+brew "openssl@3"
+# Command-line interface for SQLite
+brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Automate deployment, configuration, and upgrading
+brew "ansible"
+# Collection of portable C++ source libraries
+brew "boost"
+# Formatter/translator for text files to numerous formats
+brew "asciidoc", link: false
+# Text processor and publishing toolchain for AsciiDoc
+brew "asciidoctor", link: false
+# Parser generator
+brew "bison"
+# C++ library for C++/Python2 interoperability
+brew "boost-python"
+# Core application library for C
+brew "glib"
+# C++ interpreter
+brew "cling"
 # Cross-platform make
 brew "cmake"
-# Command-line fuzzy finder written in Go
-brew "fzf"
-# GNU debugger
-brew "gdb"
+# International domain name library (IDNA2008, Punycode and TR46)
+brew "libidn2"
+# Get a file from an HTTP, HTTPS or FTP server
+brew "curl"
+# Version control system
+brew "cvs"
+# Standard XML representation system for technical documents
+brew "docbook", link: false
+# XML vocabulary to create presentation-neutral documents
+brew "docbook-xsl", link: false
+# Text processing system for reStructuredText
+brew "docutils", link: false
+# Simple, fast and user-friendly alternative to find
+brew "fd"
+# GitHub command-line tool
+brew "gh"
+# Interpreter for PostScript and PDF
+brew "ghostscript"
+# Distributed revision control system
+brew "git"
+# C++ microbenchmark support library
+brew "google-benchmark"
+# GNU triangulated surface library
+brew "gts"
+# Framework for layout and rendering of i18n text
+brew "pango"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
+# File format designed to store large amounts of data
+brew "hdf5"
 # Improved top (interactive process viewer)
 brew "htop"
+# Lightweight and flexible command-line JSON processor
+brew "jq"
+# Interactive environments for writing and running code
+brew "jupyterlab"
+# Secure hashing function
+brew "libb2", link: false
+# LLVM's OpenMP runtime library
+brew "libomp"
+# C library for number theoretic multiple-precision integers
+brew "libtommath", link: false
+# Powerful, lightweight programming language
+brew "lua"
+# UNIX manpage compiler toolset
+brew "mandoc", link: false
+# Development kit for the Java programming language
+brew "openjdk"
+# Java-based project management
+brew "maven"
+# Open source relational database management system
+brew "mysql", restart_service: :changed, link: false
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
-# Platform built on V8 to build network applications
-brew "node"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
+# Package for scientific computing with Python
+brew "numpy"
+# SSL/TLS VPN implementing OSI layer 2 or 3 secure network extension
+brew "openvpn", link: false
+# Tool for creating identical machine images for multiple platforms
+brew "packer"
+# Python library for creating static, animated, and interactive visualizations
+brew "python-matplotlib"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
+# Substitute for classic 'make' tool with autoconf/automake functionality
+brew "scons"
+# Low-level access to audio, keyboard, mouse, joystick, and graphics
+brew "sdl2"
+# Generate scripting interfaces to C/C++ code
+brew "swig"
+# Easiest, most secure way to use WireGuard and 2FA
+brew "tailscale", restart_service: :changed
+# User interface to the TELNET protocol
+brew "telnet"
 # Terminal multiplexer
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Mesh VPN based on WireGuard
-cask "tailscale"
-vscode "ms-vscode.cmake-tools"
-vscode "ms-vscode.cpptools"
-vscode "ms-vscode.cpptools-extension-pack"
-vscode "ms-vscode.cpptools-themes"
+# Internet file retriever
+brew "wget"
+# Convert XML to another format (based on XSL or other tools)
+brew "xmlto", link: false
+# Modular BSD reimplementation of NASM
+brew "yasm", link: false
+# Distribution of the Python and R programming languages for scientific computing
+cask "anaconda"
+# Automated testing of webapps for Google Chrome
+cask "chromedriver"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+vscode "ms-python.debugpy"
+vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
+vscode "vscodevim.vim"
