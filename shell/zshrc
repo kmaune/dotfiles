@@ -78,3 +78,7 @@ alias aider-ignore='nvim ~/dotfiles/aider/.aiderignore'
 export FORCE_COLOR=0
 export NO_COLOR=1
 
+
+# Enable zsh completion system (including git tab completion)
+autoload -Uz compinit
+compinit
