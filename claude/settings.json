@@ -1,4 +1,26 @@
 {
+  "permissions": {
+    "allow": [
+      "File_read",
+      "File_write",
+      "Bash",
+      "Grep",
+      "Glob",
+      "Git",
+      "Edit",
+      "Multi_edit",
+      "Read",
+      "Write",
+      "Ls",
+      "Web_fetch",
+      "Web_search"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+  "alwaysThinkingEnabled": false,
   "ignorePatterns": [
     "**/build/**",
     "**/cmake-build-*/**",
@@ -25,27 +47,5 @@
     "**/core.*",
     "**/.git/**",
     "**/.DS_Store"
-  ],
-  "permissions": {
-    "allow": [
-      "File_read",
-      "File_write",
-      "Bash",
-      "Grep",
-      "Glob",
-      "Git",
-      "Edit",
-      "Multi_edit",
-      "Read",
-      "Write",
-      "Ls",
-      "Web_fetch",
-      "Web_search"
-    ]
-  },
-  "statusLine": {
-    "type": "command",
-    "command": "~/.claude/statusline.sh"
-  },
-  "alwaysThinkingEnabled": false
+  ]
 }
