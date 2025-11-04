@@ -1,0 +1,268 @@
+# Claude Code Global Ignore Template
+# Copy to project root as .claudeignore and customize as needed
+
+# Build Outputs and Artifacts
+build/
+dist/
+out/
+target/
+bin/
+obj/
+*.o
+*.obj
+*.a
+*.lib
+*.so
+*.dll
+*.dylib
+*.exe
+
+# Compiled and Generated Files
+*.pyc
+__pycache__/
+*.pyo
+*.pyd
+.Python
+*.class
+*.jar
+*.war
+*.ear
+
+# IDE and Editor Files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# Dependency Directories
+node_modules/
+vendor/
+.pnpm-store/
+.yarn/
+venv/
+env/
+.env
+
+# Package Manager Files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+Pipfile.lock
+poetry.lock
+Cargo.lock
+
+# Cache and Temporary Files
+.cache/
+.tmp/
+temp/
+*.tmp
+*.temp
+*.log
+logs/
+
+# Test Coverage and Reports
+.coverage
+coverage/
+htmlcov/
+.pytest_cache/
+.tox/
+.nyc_output/
+coverage.xml
+*.cover
+.hypothesis/
+
+# Documentation Generation
+docs/_build/
+docs/build/
+site/
+_site/
+.jekyll-cache/
+
+# Database Files
+*.db
+*.sqlite
+*.sqlite3
+*.db3
+
+# Large Data Files (adjust size as needed)
+*.csv
+*.json
+*.xml
+*.txt
+# Uncomment if you have large datasets
+# *.parquet
+# *.h5
+# *.hdf5
+
+# Media Files
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.svg
+*.ico
+*.mp4
+*.mp3
+*.wav
+*.pdf
+
+# Archive Files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# C++ Specific
+# Build systems
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+CTestTestfile.cmake
+_deps/
+compile_commands.json
+
+# Conan
+conandata.txt
+conaninfo.txt
+conanbuildinfo.*
+conan.lock
+
+# vcpkg
+vcpkg_installed/
+.vcpkg-root
+
+# Static analysis
+.clang-tidy
+.cppcheck/
+
+# Profiling and Performance
+*.prof
+*.perf
+perf.data*
+callgrind.out.*
+massif.out.*
+*.gcno
+*.gcda
+*.gcov
+
+# HFT and Trading Specific
+# Market data files
+*.tick
+*.trades
+*.quotes
+*.mbo
+*.mbp
+
+# Configuration files with sensitive data
+*.config
+config/
+secrets/
+keys/
+certs/
+
+# Large log files
+*.log.[0-9]*
+audit.log
+trade.log
+risk.log
+
+# Backup and temporary trading files
+*.bak
+*.backup
+*.old
+recovery/
+
+# Python Specific
+*.egg
+*.egg-info/
+.eggs/
+wheels/
+*.whl
+
+# Jupyter Notebooks (often too large/noisy)
+*.ipynb
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv*/
+env*/
+
+# Version Control
+.git/
+.gitignore
+.gitattributes
+.gitmodules
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml
+.circleci/
+.azure-pipelines.yml
+
+# Container Files
+Dockerfile*
+docker-compose*.yml
+.dockerignore
+.devcontainer/
+
+# Cloud and Infrastructure
+terraform.tfstate*
+.terraform/
+.pulumi/
+.aws/
+.azure/
+.gcp/
+
+# Security and Secrets
+.env
+.env.*
+*.pem
+*.key
+*.crt
+*.cert
+*.p12
+*.pfx
+id_rsa*
+id_ed25519*
+
+# OS Generated
+.DS_Store?
+ehthumbs.db
+Icon?
+.Spotlight-V100
+.Trashes
+
+# Project-Specific Patterns (uncomment as needed)
+# benchmarks/results/
+# data/
+# datasets/
+# models/
+# experiments/
+# research/
+
+# Performance Testing Results
+benchmark_results/
+profiling_results/
+perf_reports/
+
+# Large Generated Documentation
+doxygen_output/
+api_docs/
+reference/
+
+# Backup configurations
+*.conf.bak
+*.ini.bak
+*.yaml.bak
+*.json.bak
+
+# Editor backup files
+*~
+.#*
+\#*#

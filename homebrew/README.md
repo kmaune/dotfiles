@@ -31,16 +31,16 @@ homebrew/
          ./backup_brew.sh export
             ```
 
-            2. **Create personal Brewfile** for work/personal-specific packages:
-               ```bash
-                  ./backup_brew.sh personal
-                     ```
+2. **Create personal Brewfile** for work/personal-specific packages:
+   ```bash
+      ./backup_brew.sh personal
+      ```
 
-                     3. **Commit the main Brewfile** to your dotfiles:
-                        ```bash
-                           git add Brewfile
-                              git commit -m "Add Homebrew package list"
-                                 ```
+3. **Commit the main Brewfile** to your dotfiles:
+   ```bash
+      git add Brewfile
+         git commit -m "Add Homebrew package list"
+            ```
 
 ### New Machine Setup
 

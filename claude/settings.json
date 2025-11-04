@@ -1,0 +1,51 @@
+{
+  "permissions": {
+    "allow": [
+      "File_read",
+      "File_write",
+      "Bash",
+      "Grep",
+      "Glob",
+      "Git",
+      "Edit",
+      "Multi_edit",
+      "Read",
+      "Write",
+      "Ls",
+      "Web_fetch",
+      "Web_search"
+    ]
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh"
+  },
+  "alwaysThinkingEnabled": false,
+  "ignorePatterns": [
+    "**/build/**",
+    "**/cmake-build-*/**",
+    "**/.cache/**",
+    "**/node_modules/**",
+    "**/venv/**",
+    "**/env/**",
+    "**/__pycache__/**",
+    "**/*.pyc",
+    "**/*.pyo",
+    "**/target/**",
+    "**/*.o",
+    "**/*.a",
+    "**/*.so",
+    "**/*.dylib",
+    "**/*.exe",
+    "**/compile_commands.json",
+    "**/.vscode/**",
+    "**/.idea/**",
+    "**/CMakeFiles/**",
+    "**/CMakeCache.txt",
+    "**/*.log",
+    "**/core",
+    "**/core.*",
+    "**/.git/**",
+    "**/.DS_Store"
+  ]
+}

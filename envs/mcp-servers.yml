@@ -1,10 +1,10 @@
-name: ai_env
+name: mcp-servers
 channels:
   - https://repo.anaconda.com/pkgs/main
   - https://repo.anaconda.com/pkgs/r
 dependencies:
-  - pytorch
-  - torchvision
-  - transformers
-  - jupyter
-  - matplotlib
+  - pylint
+  - python=3.13
+  - pytest
+  - pip
+  - black
