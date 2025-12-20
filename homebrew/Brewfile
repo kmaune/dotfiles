@@ -4,8 +4,6 @@ tap "homebrew/services"
 tap "o4dev/valgrind-mojave"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@3"
-# Command-line interface for SQLite
-brew "sqlite"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.12"
 # Automate deployment, configuration, and upgrading
@@ -20,6 +18,8 @@ brew "asciidoctor", link: false
 brew "bison"
 # C++ library for C++/Python2 interoperability
 brew "boost-python"
+# Powerful, enterprise-ready, open source web server with automatic HTTPS
+brew "caddy"
 # Core application library for C
 brew "glib"
 # C++ interpreter
@@ -70,6 +70,8 @@ brew "libomp"
 brew "libtommath", link: false
 # Powerful, lightweight programming language
 brew "lua"
+# Utility for directing compilation
+brew "make", link: false
 # UNIX manpage compiler toolset
 brew "mandoc", link: false
 # Development kit for the Java programming language
