@@ -1,24 +1,6 @@
 #export PS1="%{%F{39}%}%n%{%F{81}%}@%{%F{77}%}%m %{%F{226}%}%1~%{%f%}%% " # original, blue,green,yellow
 export PS1="%{%F{67}%}%n%{%F{109}%}@%{%F{108}%}%m %{%F{150}%}%1~%{%f%}%% " # nord inspired, from claude
 
-# >>> conda initialize >>>
-# !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/opt/anaconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
-if [ $? -eq 0 ]; then
-    eval "$__conda_setup"
-else
-    if [ -f "/opt/anaconda3/etc/profile.d/conda.sh" ]; then
-        . "/opt/anaconda3/etc/profile.d/conda.sh"
-    else
-        export PATH="/opt/anaconda3/bin:$PATH"
-    fi
-fi
-unset __conda_setup
-# <<< conda initialize <<<
-
-# Add scripts from dotfiles submodule to PATH
-export PATH="$HOME/dotfiles/scripts:$HOME/dotfiles/scripts/openwebui:$PATH"
-
 # Increase history size
 export HISTFILE=~/.zsh_history  # History file location
 export HISTSIZE=100000      # Number of commands stored in memory
@@ -38,46 +20,7 @@ setopt HIST_IGNORE_SPACE   # Don't record lines starting with a space (e.g., ` h
 setopt HIST_NO_STORE       # Don't store the `history` command itself in history
 setopt HIST_REDUCE_BLANKS  # Remove extra blanks from history lines
 
-# Created by `pipx` on 2025-06-03 02:41:02
-export PATH="$PATH:/Users/kmaune/.local/bin"
-
 alias nv='nvim'
-
-# Homebrew management aliases for convenience  
-alias brew-backup='~/dotfiles/homebrew/backup_brew.sh'
-# Mac power management (private script)
-alias mac-power='~/dotfiles/scripts/_mac_power.sh'
-
-# Aider AI coding assistant aliases
-alias aider-quick='aider --model ollama/qwen2.5-coder:7b'
-alias aider-heavy='aider --model ollama/qwen2.5-coder:32b' 
-alias aider-alt='aider --model ollama/devstral'
-
-# Free OpenRouter models alias
-alias aider-deepseek='aider --model openrouter/deepseek/deepseek-chat:free'
-alias aider-r1='aider --model openrouter/deepseek/deepseek-r1:free'
-alias aider-qwen='aider --model openrouter/qwen/qwen-2.5-coder-32b-instruct:free'
-
-# Helper function to show available models
-aider-models() {
-    echo "Available aider configurations:"
-    echo "  aider-quick     - Local 7B (fast)"
-    echo "  aider-heavy     - Local 32B (thorough)"
-    echo "  aider-alt       - Local Devstral 24B"
-    echo "  aider-deepseek  - DeepSeek Chat (free, fast)"
-    echo "  aider-r1        - DeepSeek R1 (free, reasoning)"
-    echo "  aider-qwen      - OpenRouter QwenCoder (32B, free)"
-}
-
-
-# Aider utility aliases
-alias aider-config='nvim ~/dotfiles/aider/.aider.conf.yml'
-alias aider-ignore='nvim ~/dotfiles/aider/.aiderignore'
-
-# Force Aider to use more terminal-friendly colors
-export FORCE_COLOR=0
-export NO_COLOR=1
-
 
 # Enable zsh completion system (including git tab completion)
 autoload -Uz compinit
