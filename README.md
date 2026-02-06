@@ -1,6 +1,6 @@
-<B# Ubuntu Server Setup Guide (P4 Mini Server)
+# Ubuntu Server Setup Guide (P4 Mini Server)
 
-Complete setup guide for Ubuntu 24.04 Server with dotfiles.
+Complete setup guide for Ubuntu 24.04 Server with dotfiles and Tailscale.
 
 ## Prerequisites
 
@@ -166,6 +166,43 @@ tmux
 # Press Ctrl+a then Shift+I if they don't auto-install
 ```
 
+## Tailscale Installation
+
+Install Tailscale for remote access to the P4 from anywhere.
+
+**Installation:**
+```bash
+# Install Tailscale
+curl -fsSL https://tailscale.com/install.sh | sh
+
+# Verify installation
+tailscale version
+
+# Connect to your Tailscale network
+sudo tailscale up
+
+# This will output a URL like: https://login.tailscale.com/a/xxxxx
+# Open that URL in a browser and authenticate
+```
+
+**Verification:**
+```bash
+# Check status and see all devices on your network
+tailscale status
+
+# Get your Tailscale IP
+tailscale ip -4
+
+# Test connectivity to other devices
+ping -c 3 100.100.57.86  # macbookserver
+ping -c 3 100.71.156.70  # macbookpro
+```
+
+**Your P4's Tailscale identity:**
+- Hostname: `p4-mini-server`
+- Tailscale IP: `100.69.72.38`
+- Can be accessed from any device on your Tailscale network
+
 ## Post-Installation
 
 **Reconnect to see changes:**
@@ -200,6 +237,10 @@ gcc --version  # Required for tree-sitter compilation
 
 # SSH
 ssh -T git@github.com  # Should authenticate successfully
+
+# Tailscale
+tailscale status  # Should show connected devices
+tailscale ip -4  # Should show 100.69.72.38
 ```
 
 ## Troubleshooting
@@ -242,11 +283,27 @@ sudo apt install zsh
 chsh -s /usr/bin/zsh
 ```
 
+### Tailscale issues
+```bash
+# Check if Tailscale daemon is running
+sudo systemctl status tailscaled
+
+# Restart Tailscale
+sudo systemctl restart tailscaled
+
+# Re-authenticate
+sudo tailscale up
+
+# Check connectivity
+tailscale status
+tailscale ping macbookserver
+```
+
 ## Next Steps
 
-After dotfiles are configured:
+After dotfiles and Tailscale are configured:
 
-1. **Install Tailscale** - Remote access from anywhere
+1. ✅ **Tailscale installed** - Remote access configured
 2. **Install Docker** - Container runtime for services  
 3. **Set up monitoring** - Extend Box 1 monitoring patterns
 4. **Deploy services** - Jellyfin, Nextcloud, etc.
@@ -261,6 +318,9 @@ After dotfiles are configured:
 
 **npm global packages:**
 - tree-sitter-cli
+
+**Additional installations:**
+- Tailscale (via install script)
 
 **Manual fixes:**
 - Symlink: batcat → bat

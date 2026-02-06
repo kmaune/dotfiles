@@ -124,6 +124,24 @@ else
     MISSING_PACKAGES+=("tree-sitter-cli")
 fi
 
+# Install Tailscale
+echo "Installing Tailscale..."
+if command -v tailscale &> /dev/null; then
+    echo "✓ Tailscale already installed"
+else
+    echo "Installing Tailscale via install script..."
+    curl -fsSL https://tailscale.com/install.sh | sh
+    if command -v tailscale &> /dev/null; then
+        echo "✓ Tailscale installed successfully"
+        echo ""
+        echo "⚠️  IMPORTANT: Run 'sudo tailscale up' to connect to your network"
+        echo "You will receive a URL to authenticate in your browser"
+    else
+        echo "✗ Tailscale installation failed"
+    fi
+fi
+echo ""
+
 echo ""
 
 # Report missing packages

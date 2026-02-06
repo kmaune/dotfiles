@@ -39,6 +39,7 @@ check_command "npm"
 check_command "tree-sitter"
 check_command "unzip"
 check_command "openconnect"
+check_command "tailscale"
 
 echo ""
 echo "============================================"
@@ -61,6 +62,27 @@ check_symlink ~/.config/nvim
 check_symlink ~/.config/tmux
 check_symlink ~/.zshrc
 check_symlink ~/.gitconfig
+
+
+echo ""
+echo "============================================"
+echo "Tailscale Configuration"
+echo "============================================"
+echo ""
+
+if command -v tailscale &> /dev/null; then
+    if tailscale status &> /dev/null; then
+        echo "✓ Tailscale connected"
+        TAILSCALE_IP=$(tailscale ip -4 2>/dev/null)
+        echo "  Tailscale IP: $TAILSCALE_IP"
+        echo "  Hostname: $(hostname)"
+    else
+        echo "⚠️  Tailscale installed but not connected"
+        echo "  Run: sudo tailscale up"
+    fi
+else
+    echo "✗ Tailscale not installed"
+fi
 
 echo ""
 echo "============================================"
