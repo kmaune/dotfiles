@@ -79,6 +79,7 @@ check_command "vim" "vim" || MISSING_PACKAGES+=("vim")
 check_command "git" "git" || MISSING_PACKAGES+=("git")
 check_command "curl" "curl" || MISSING_PACKAGES+=("curl")
 check_command "wget" "wget" || MISSING_PACKAGES+=("wget")
+check_command "unzip" "unzip" || MISSING_PACKAGES+=("unzip")
 check_command "htop" "htop" || MISSING_PACKAGES+=("htop")
 check_command "fzf" "fzf" || MISSING_PACKAGES+=("fzf")
 
@@ -107,6 +108,7 @@ check_command "gcc" "build-essential" || MISSING_PACKAGES+=("build-essential")
 check_command "make" "build-essential" || MISSING_PACKAGES+=("build-essential")
 check_command "cmake" "cmake" || MISSING_PACKAGES+=("cmake")
 check_command "rg" "ripgrep" || MISSING_PACKAGES+=("ripgrep")
+check_command "clangd" "clangd" || MISSING_PACKAGES+=("clangd")
 
 # Check Node.js/npm
 check_command "node" "nodejs" || MISSING_PACKAGES+=("nodejs")

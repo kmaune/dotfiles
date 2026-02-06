@@ -1,4 +1,4 @@
-# Ubuntu Server Setup Guide (P4 Mini Server)
+<B# Ubuntu Server Setup Guide (P4 Mini Server)
 
 Complete setup guide for Ubuntu 24.04 Server with dotfiles.
 
@@ -17,14 +17,14 @@ sudo apt update && sudo apt upgrade -y
 # Core utilities
 sudo apt install -y \
   zsh \
-    tmux \
-      vim \
-        git \
-          curl \
-            wget \
-              htop \
-                fzf \
-                  bat
+  tmux \
+  vim \
+  git \
+  curl \
+  wget \
+  htop \
+  fzf \
+  bat
 
 # Neovim (latest from unstable PPA)
 sudo add-apt-repository ppa:neovim-ppa/unstable -y
@@ -34,12 +34,13 @@ sudo apt install -y neovim
 # Build tools (required for tree-sitter compilation and nvim plugins)
 sudo apt install -y \
   build-essential \
-    gcc \
-      g++ \
-        make \
-          cmake \
-            ripgrep \
-              fd-find
+  gcc \
+  g++ \
+  make \
+  cmake \
+  ripgrep \
+  fd-find \
+  clangd
 
 # Node.js and npm (required for tree-sitter CLI and LSP servers)
 sudo apt install -y nodejs npm
@@ -73,9 +74,9 @@ ssh-copy-id -i ~/.ssh/p4_server_key kmaune@192.168.86.84
 cat >> ~/.ssh/config << 'EOF'
 Host p4-server
     HostName 192.168.86.84
-        User kmaune
-            IdentityFile ~/.ssh/p4_server_key
-            EOF
+    User kmaune
+    IdentityFile ~/.ssh/p4_server_key
+EOF
 
 # Test connection (should not ask for password)
 ssh p4-server
@@ -98,9 +99,9 @@ cat ~/.ssh/github_key.pub
 cat >> ~/.ssh/config << 'EOF'
 Host github.com
     HostName github.com
-        User git
-            IdentityFile ~/.ssh/github_key
-            EOF
+    User git
+    IdentityFile ~/.ssh/github_key
+EOF
 
 # Test GitHub connection
 ssh -T git@github.com
@@ -144,9 +145,9 @@ If you see tree-sitter errors:
 - Ensure build-essential is installed: `gcc --version`
 - Clean nvim data and restart:
   ```bash
-    rm -rf ~/.local/share/nvim ~/.local/state/nvim ~/.cache/nvim
-      nvim
-        ```
+  rm -rf ~/.local/share/nvim ~/.local/state/nvim ~/.cache/nvim
+  nvim
+  ```
 
 ## Tmux Configuration
 
@@ -255,7 +256,7 @@ After dotfiles are configured:
 **apt packages installed:**
 - Core: zsh, tmux, vim, git, curl, wget, htop, fzf, bat
 - Neovim: neovim (from ppa:neovim-ppa/unstable)
-- Build tools: build-essential, gcc, g++, make, cmake, ripgrep, fd-find
+- Build tools: build-essential, gcc, g++, make, cmake, ripgrep, fd-find, clangd
 - Runtime: nodejs, npm
 
 **npm global packages:**
