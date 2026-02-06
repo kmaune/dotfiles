@@ -22,6 +22,10 @@ setopt HIST_REDUCE_BLANKS  # Remove extra blanks from history lines
 
 alias nv='nvim'
 
+# VPN connection helpers
+alias blackedge-vpn='~/dotfiles/scripts/_blackedge_vpn_connect.sh'
+alias vpn-status='ip addr show | grep "inet 10\."'
+
 # Enable zsh completion system (including git tab completion)
 autoload -Uz compinit
 compinit

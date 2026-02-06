@@ -38,6 +38,7 @@ check_command "node"
 check_command "npm"
 check_command "tree-sitter"
 check_command "unzip"
+check_command "openconnect"
 
 echo ""
 echo "============================================"

@@ -82,6 +82,7 @@ check_command "wget" "wget" || MISSING_PACKAGES+=("wget")
 check_command "unzip" "unzip" || MISSING_PACKAGES+=("unzip")
 check_command "htop" "htop" || MISSING_PACKAGES+=("htop")
 check_command "fzf" "fzf" || MISSING_PACKAGES+=("fzf")
+check_command "openconnect" "openconnect" || MISSING_PACKAGES+=("openconnect")
 
 # Check bat (might be batcat)
 if command -v bat &> /dev/null; then
