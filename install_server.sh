@@ -124,24 +124,6 @@ else
     MISSING_PACKAGES+=("tree-sitter-cli")
 fi
 
-# Install Tailscale
-echo "Installing Tailscale..."
-if command -v tailscale &> /dev/null; then
-    echo "✓ Tailscale already installed"
-else
-    echo "Installing Tailscale via install script..."
-    curl -fsSL https://tailscale.com/install.sh | sh
-    if command -v tailscale &> /dev/null; then
-        echo "✓ Tailscale installed successfully"
-        echo ""
-        echo "⚠️  IMPORTANT: Run 'sudo tailscale up' to connect to your network"
-        echo "You will receive a URL to authenticate in your browser"
-    else
-        echo "✗ Tailscale installation failed"
-    fi
-fi
-echo ""
-
 echo ""
 
 # Report missing packages
@@ -200,6 +182,59 @@ else
 fi
 echo ""
 
+# Install Tailscale
+echo "Installing Tailscale..."
+if command -v tailscale &> /dev/null; then
+    echo "✓ Tailscale already installed"
+else
+    echo "Installing Tailscale via install script..."
+    curl -fsSL https://tailscale.com/install.sh | sh
+    if command -v tailscale &> /dev/null; then
+        echo "✓ Tailscale installed successfully"
+        echo ""
+        echo "⚠️  IMPORTANT: Run 'sudo tailscale up' to connect to your network"
+        echo "You will receive a URL to authenticate in your browser"
+    else
+        echo "✗ Tailscale installation failed"
+    fi
+fi
+echo ""
+
+# Install Docker
+echo "Installing Docker..."
+if command -v docker &> /dev/null; then
+    echo "✓ Docker already installed"
+else
+    echo "Installing Docker via official script..."
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sudo sh get-docker.sh
+    rm get-docker.sh
+    
+    if command -v docker &> /dev/null; then
+        echo "✓ Docker installed successfully"
+        
+        # Add user to docker group
+        echo "Adding $USER to docker group..."
+        sudo usermod -aG docker $USER
+        
+        # Install docker-compose plugin
+        echo "Installing docker-compose plugin..."
+        sudo apt install -y docker-compose-plugin
+        
+        # Enable and start Docker service
+        sudo systemctl enable docker
+        sudo systemctl start docker
+        
+        echo "✓ Docker setup complete"
+        echo ""
+        echo "⚠️  IMPORTANT: Log out and back in for docker group membership to take effect"
+        echo "After re-login, verify with: docker run hello-world"
+    else
+        echo "✗ Docker installation failed"
+    fi
+fi
+echo ""
+
 # Final summary
 echo "============================================"
 echo "Installation Complete!"
@@ -213,6 +248,7 @@ echo "  2. Change default shell: chsh -s /usr/bin/zsh"
 echo "  3. Log out and back in for shell change to take effect"
 echo "  4. Test tmux: tmux (then Ctrl+a then o for sessionx)"
 echo "  5. Test nvim: nvim (plugins will auto-install on first launch)"
+echo "  6. Test docker: docker run hello-world"
 echo ""
 echo "To verify installation, run:"
 echo "  ~/dotfiles/verify_install.sh"

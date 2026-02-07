@@ -40,6 +40,24 @@ check_command "tree-sitter"
 check_command "unzip"
 check_command "openconnect"
 check_command "tailscale"
+check_command "docker"
+
+echo ""
+echo "============================================"
+echo "Docker Compose"
+echo "============================================"
+echo ""
+
+if command -v docker &> /dev/null; then
+    if docker compose version &> /dev/null; then
+        COMPOSE_VERSION=$(docker compose version 2>&1)
+        echo "✓ $COMPOSE_VERSION"
+    else
+        echo "✗ docker compose: NOT FOUND"
+    fi
+else
+    echo "✗ Docker not installed"
+fi
 
 echo ""
 echo "============================================"
@@ -63,7 +81,6 @@ check_symlink ~/.config/tmux
 check_symlink ~/.zshrc
 check_symlink ~/.gitconfig
 
-
 echo ""
 echo "============================================"
 echo "Tailscale Configuration"
@@ -76,12 +93,62 @@ if command -v tailscale &> /dev/null; then
         TAILSCALE_IP=$(tailscale ip -4 2>/dev/null)
         echo "  Tailscale IP: $TAILSCALE_IP"
         echo "  Hostname: $(hostname)"
+        
+        # Check if advertising as exit node
+        if tailscale status | grep -q "offers exit node"; then
+            echo "  Exit node: ✓ Advertising"
+        else
+            echo "  Exit node: ✗ Not advertising"
+        fi
+        
+        # Check IP forwarding
+        IPV4_FORWARD=$(sysctl -n net.ipv4.ip_forward 2>/dev/null)
+        IPV6_FORWARD=$(sysctl -n net.ipv6.conf.all.forwarding 2>/dev/null)
+        if [ "$IPV4_FORWARD" = "1" ] && [ "$IPV6_FORWARD" = "1" ]; then
+            echo "  IP forwarding: ✓ Enabled"
+        else
+            echo "  IP forwarding: ✗ Disabled (required for exit node)"
+        fi
     else
         echo "⚠️  Tailscale installed but not connected"
         echo "  Run: sudo tailscale up"
     fi
 else
     echo "✗ Tailscale not installed"
+fi
+
+echo ""
+echo "============================================"
+echo "Docker Configuration"
+echo "============================================"
+echo ""
+
+if command -v docker &> /dev/null; then
+    # Check if docker daemon is running
+    if docker info &> /dev/null; then
+        echo "✓ Docker daemon running"
+        
+        # Check if user is in docker group
+        if groups | grep -q docker; then
+            echo "  Docker group: ✓ User in docker group"
+        else
+            echo "  Docker group: ✗ User not in docker group"
+            echo "    Run: sudo usermod -aG docker $USER"
+            echo "    Then log out and back in"
+        fi
+        
+        # Check docker service status
+        if systemctl is-enabled docker &> /dev/null; then
+            echo "  Auto-start: ✓ Enabled"
+        else
+            echo "  Auto-start: ✗ Disabled"
+        fi
+    else
+        echo "⚠️  Docker installed but daemon not running"
+        echo "  Run: sudo systemctl start docker"
+    fi
+else
+    echo "✗ Docker not installed"
 fi
 
 echo ""
@@ -119,3 +186,14 @@ echo "============================================"
 echo ""
 echo "Run 'nvim' and execute ':checkhealth' for detailed nvim diagnostics"
 
+echo ""
+echo "============================================"
+echo "Quick Tests"
+echo "============================================"
+echo ""
+echo "To test Docker, run:"
+echo "  docker run hello-world"
+echo ""
+echo "To test Tailscale connectivity, run:"
+echo "  ping -c 3 100.100.57.86  # macbookserver"
+echo ""
