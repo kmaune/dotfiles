@@ -1,50 +1,29 @@
 #!/bin/bash
 # Claude Code setup script
 
-echo "Setting up Claude Code AI assistant..."
+echo "Setting up Claude Code..."
 
-# Create symlinks for configuration files
-rm -f ~/.claude/settings.json ~/.claude/CLAUDE.md ~/.claude/.claudeignore
-ln -sf ~/dotfiles/claude/settings.json ~/.claude/settings.json
-ln -sf ~/dotfiles/claude/CLAUDE.md ~/.claude/CLAUDE.md  
-ln -sf ~/dotfiles/claude/.claudeignore ~/.claude/.claudeignore
-echo "✓ Claude Code configuration files linked"
+# Handle existing ~/.claude
+if [ -L ~/.claude ]; then
+    # Already a symlink — remove and recreate
+    rm ~/.claude
+elif [ -d ~/.claude ]; then
+    # Real directory — back it up (may contain runtime data worth keeping)
+    echo "⚠️  Backing up existing ~/.claude to ~/.claude.backup"
+    mv ~/.claude ~/.claude.backup
+fi
 
-# Create symlinks for agents and commands directories
-rm -rf ~/.claude/agents ~/.claude/commands
-ln -sf ~/dotfiles/claude/agents ~/.claude/agents
-ln -sf ~/dotfiles/claude/commands ~/.claude/commands
-echo "✓ Claude Code agents and commands linked"
+# Symlink the whole directory
+ln -sf ~/dotfiles/claude ~/.claude
+echo "✓ ~/.claude → ~/dotfiles/claude"
 
-# Set basic configuration via CLI
+# Verify
 if command -v claude &> /dev/null; then
-    echo "✓ Claude Code command available"
-    
-    # Check current configuration
-    echo "Current Claude Code configuration:"
-    claude config list
-    echo "✓ Configuration managed via settings.json"
+    echo "✓ Claude Code found: $(claude --version 2>/dev/null || echo 'version unknown')"
 else
     echo "⚠️  Claude Code not found. Install with:"
     echo "   npm install -g @anthropic-ai/claude-code"
-    echo "   # or"
-    echo "   brew install claude-code"
 fi
 
-echo "✓ Claude Code setup complete!"
 echo ""
-echo "Usage:"
-echo "  claude                  # Start Claude Code session"
-echo "  claude --help          # Show available options"
-echo "  claude --no-confirm    # Skip permission prompts"
-echo ""
-echo "Available agents:"
-echo "  cpp-code-reviewer      # C++ code review specialist"
-echo "  cpp-implementer        # Direct C++ implementation"
-echo "  cpp-mentor             # C++ learning and guidance"
-echo "  cpp-performance-expert # C++ performance optimization"
-echo "  git-workflow-helper    # Git operations and workflows"
-echo "  hft-code-reviewer      # High-frequency trading system reviews"
-echo "  hft-systems-architect  # Low-latency system design"
-echo "  principal-code-reviewer # General code review"
-echo "  principal-systems-architect # High-level architecture"
+echo "Done. Run 'claude' to start a session."
