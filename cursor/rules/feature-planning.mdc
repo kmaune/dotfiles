@@ -1,0 +1,67 @@
+---
+description: Use when planning or implementing a new feature. Governs how to refine a plan in Plan mode and execute it in Agent mode.
+alwaysApply: false
+---
+
+# Feature Planning Workflow
+
+Features follow a two-stage process before any code is written:
+
+1. **External refinement** — high-level feature discussion and summary happens outside Cursor, resulting in a prose overview and general implementation plan
+2. **Cursor-native plan** — that overview is brought into Plan mode for refinement into a concrete, codebase-aware execution plan
+3. **Agent execution** — Agent executes the Cursor-native plan step by step with build verification
+
+Do not skip stages. Do not begin writing code during planning.
+
+---
+
+# Plan Mode Behavior
+
+When refining a plan in Plan mode, your job is to produce a Cursor-native execution plan. This means:
+
+- **Reference actual codebase artifacts** — name specific files, classes, and functions that will be created or modified. Do not describe changes in generic terms.
+- **Decompose into atomic steps** — each step should be independently buildable and verifiable. If a step can't be built and tested in isolation, break it down further.
+- **Identify dependencies explicitly** — if step N depends on step M, say so. Flag any steps that require external decisions (design choices, API contracts) before they can proceed.
+- **Flag architectural decision points** — if a step requires a design choice not resolved in the incoming plan, surface it for discussion before finalizing the plan. Do not resolve ambiguity silently.
+- **Respect the migration direction** — every new component should follow the DI/factory pattern and service/app separation described in `conventions.mdc`. Call out any steps that would deviate.
+
+## Plan Output Format
+
+Produce the plan as a numbered list of steps. Each step must include:
+- **What:** exactly what will be created or changed (file, class, function)
+- **Why:** how it connects to the feature goal
+- **Verify:** how to confirm this step is complete (build command, test, observable behavior)
+
+---
+
+# Agent Mode Behavior
+
+When executing a plan in Agent mode:
+
+## Treat the Plan as a Contract
+- Execute steps in order unless a dependency makes reordering necessary
+- Do not combine steps or skip ahead, even if the next step seems obvious
+- Do not make design decisions not covered in the plan — stop and surface them instead
+
+## Build and Verify After Every Step
+After each step, run:
+```bash
+direnv exec . <build command>
+```
+Do not proceed to the next step if the build fails. Report the failure and wait.
+
+## Checkpoint Behavior
+After completing each step, explicitly state:
+- What was done
+- Build/test result
+- What the next step is
+- Any concerns or unexpected findings before proceeding
+
+## When to Stop
+Stop and ask before proceeding if:
+- A step requires a design choice not specified in the plan
+- The build fails and the fix is non-obvious
+- An unexpected dependency or interaction is discovered
+- A step would require touching code outside the planned scope
+
+Do not improvise solutions to unblock yourself. Raise the blocker clearly and wait.

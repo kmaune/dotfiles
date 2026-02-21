@@ -1,0 +1,72 @@
+---
+description: Structured code review checklist and severity tiers for the Delta One codebase. Use when reviewing code changes, PRs, or diffs.
+alwaysApply: false
+---
+
+# Code Review Approach
+
+You are performing a thorough, skeptical code review. Do not be lenient. The goal is to find real problems, not to validate the author's choices. Structure all feedback using the severity tiers below.
+
+When reviewing, always consider the trading context: a bug that would be minor in a typical application may be a risk management failure or a latency regression here.
+
+## Input Context
+
+Reviews are typically provided as a `.diff` file generated with:
+```bash
+git diff main... > feature_to_review_mr.diff
+```
+This represents the same diff shown in the GitLab MR UI — changes on the feature branch relative to the common ancestor with `main`. Review the diff as a whole before commenting on individual hunks. Do not assume context outside the diff unless you can see it in the worktree.
+
+# Severity Tiers
+
+## 🚨 Critical — Must Address Before Merge
+Issues that could cause production failures, risk exposure, or data corruption:
+- Memory safety violations, resource leaks, undefined behavior
+- Risk management gaps — any path that could leave position or exposure untracked
+- Data integrity issues — precision errors, sequence gaps, inconsistent state
+- Hot path regressions — allocations, syscalls, locks, or unbounded operations on the critical path
+- Fail-soft where the system should fail-hard — masking invariant violations instead of throwing
+
+## ⚠️ Important — Should Address
+Issues that degrade correctness, safety, or maintainability:
+- Modern C++ anti-patterns (raw owning pointers, manual memory management)
+- Missing const correctness
+- Exception safety violations
+- Insufficient or unclear test coverage
+- Violations of the Chassis pattern or dependency injection direction
+- Code that tightens coupling to infrastructure (makes future migration harder)
+
+## 📝 Minor — Consider for Future
+Low-urgency improvements:
+- Style or naming inconsistencies
+- Documentation gaps
+- Refactoring opportunities that don't affect correctness
+- Incremental improvements toward the DI/service-app architecture
+
+# Review Checklist
+
+For every review, explicitly check:
+- [ ] No allocations or syscalls introduced on critical paths
+- [ ] All new state transitions are logged
+- [ ] Invariant violations throw, not return error codes
+- [ ] New components accept dependencies via injection, not internal construction
+- [ ] Strong typedefs used for any new domain primitives (IDs, prices, quantities)
+- [ ] const correctness maintained throughout
+- [ ] RAII used for any new resource acquisition
+- [ ] Does this change make the architectural migration easier or harder?
+
+# Output Format
+
+Structure your review as:
+
+**Summary:** One paragraph on the overall quality and intent of the change.
+
+**Critical issues:** List each 🚨 item with exact location, explanation of the risk, and a concrete fix.
+
+**Important issues:** List each ⚠️ item with location and suggested improvement.
+
+**Minor notes:** Brief bullet list of 📝 items.
+
+**Verdict:** APPROVE / REQUEST CHANGES / NEEDS DISCUSSION — with one sentence of reasoning.
+
+If there are no issues in a tier, omit that section rather than writing "none found."

@@ -1,0 +1,50 @@
+---
+description: Apply when working on trading logic, market data, risk, position management, order flow, or any Delta One business context
+alwaysApply: false
+---
+
+# Business Model
+
+**Core strategy:** Automated market making in CME Treasury futures (ZN, ZF, ZB, UB, TN)
+- Provide bid/offer spreads to capture the spread — NOT directional trading
+- Minimize overnight positions and avoid large directional risk
+- Leverage private fill information as a key competitive advantage
+
+# System Architecture
+
+| Component | Responsibility |
+|---|---|
+| **ATS (Autotrader System)** | Individual trading application, one per instrument |
+| **PositionServer** | Coordinates position and risk across multiple ATS instances |
+| **FillSnooper** | Private order flow intelligence derived from our fills |
+| **Market Data** | Redundant CME feeds (MSGW + MDP) via multicast |
+
+# Trading Framework Pipeline
+
+```
+Features → Model → Strategy → Execution
+```
+
+- **Features:** Computed from market data and private fills
+- **Model:** Predicts edge (regression, decision trees)
+- **Strategy:** Position sizing, GFD placement, hedging, risk management
+- **Execution:** Order submission and lifecycle management
+
+# Key Technical Concerns
+
+**Latency:** Sub-microsecond critical paths. No allocations in hot paths. No syscalls, locks, or unbounded operations on the critical path.
+
+**Risk:** Real-time position tracking, perimeter limits, kill switches. Risk management gaps are the highest severity failure mode.
+
+**Reliability:** Fail-hard on inconsistent state. Deterministic replay capability must be preserved. Never mask state corruption.
+
+**Coordination:** Multi-ATS position synchronization. Risk updates must be atomic across instances.
+
+# Domain Vocabulary
+
+When reasoning about this codebase, use precise domain terminology:
+- **Edge** — predicted profit from a trade
+- **GFD** — Good For Day order type
+- **Perimeter limits** — risk boundaries enforced by PositionServer
+- **Private fill information** — intelligence derived from our own order flow via FillSnooper
+- **Spread capture** — the core revenue mechanism; buying the bid, selling the offer

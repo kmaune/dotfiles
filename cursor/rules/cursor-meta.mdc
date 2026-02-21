@@ -1,0 +1,144 @@
+---
+description: Use when creating or updating Cursor rules, commands, or subagents for this project. Defines conventions and structure for all Cursor configuration artifacts.
+alwaysApply: false
+---
+
+# Cursor Artifact Conventions
+
+This rule governs how new rules, commands, and subagents are created for this project. Always apply it when asked to create or modify any Cursor configuration file.
+
+All artifacts live in `~/dotfiles/cursor/` and are symlinked into each worktree via `.cursor/`. Never create artifacts directly in a worktree — always create them in dotfiles.
+
+---
+
+# Rules (`.cursor/rules/*.mdc`)
+
+## When to Create a New Rule vs. Extend an Existing One
+- Extend an existing rule if the new content is directly related to its scope and won't push it over 500 lines
+- Create a new rule if the content represents a distinct concern, activation pattern, or audience
+- Never duplicate content across rules — if two rules need the same context, reference the other rule via `@rule-name.mdc`
+
+## Activation Type Decision
+
+| Situation | Type | Frontmatter |
+|---|---|---|
+| Must always be active (core role, environment) | Always Apply | `alwaysApply: true` |
+| Relevant to specific file types | Apply to Specific Files | `globs: "**/*.cpp,**/*.h"` |
+| Relevant to a domain or task the agent can infer | Apply Intelligently | `alwaysApply: false` + description only |
+| Explicitly invoked for a specific workflow | Apply Manually | no globs, no alwaysApply |
+
+Do not combine globs and description in the same rule — pick one activation mechanism.
+
+## Rule File Structure
+```
+---
+description: "Clear statement of when this rule applies and what it governs"
+globs: "glob pattern if file-scoped"
+alwaysApply: false
+---
+
+# Rule Title
+
+Brief one-line summary of purpose.
+
+[Rule content — focused, actionable, under 500 lines]
+```
+
+## Rule Content Standards
+- Write like concise internal documentation, not a style guide
+- Provide concrete examples for non-obvious patterns
+- Reference canonical codebase files with `@path/to/file.cpp` instead of copying content
+- Include a code example only when the pattern is genuinely non-obvious
+- Do not document things the model already knows (standard C++, common tools)
+- Do not add instructions for edge cases that rarely apply — add rules only when you observe repeated mistakes
+
+---
+
+# Commands (`.cursor/commands/*.md`)
+
+Commands are plain markdown — no frontmatter. The filename becomes the slash command name.
+
+## When to Create a Command vs. a Rule
+- Use a **command** for a repeatable workflow you invoke explicitly (review, plan, explain)
+- Use a **rule** for persistent context or behavior that should be available automatically
+- Do not create a command that simply re-states a rule — commands should orchestrate workflows, not duplicate rule content
+
+## Command File Structure
+```markdown
+# Command Title
+
+One sentence describing what this command does.
+
+## Instructions
+
+Clear, direct instructions for the agent. Reference relevant rules with @rule-name.mdc where applicable.
+
+## [Optional sections as needed — Setup, Output Format, etc.]
+
+[Placeholder for user input if needed, clearly marked]
+```
+
+## Command Content Standards
+- Start with the context the agent needs before the instructions
+- Reference rules with `@` rather than repeating their content
+- Include a clearly marked placeholder if the command expects user-provided input
+- Define an explicit output format if the command produces structured output
+
+---
+
+# Subagents (`.cursor/agents/*.md`)
+
+## When to Create a Subagent vs. a Command
+- Use a **subagent** when the task benefits from running in the background, in parallel, or with isolated context
+- Use a **command** when the task is single-purpose and sequential
+- Do not create a subagent for something a command handles adequately
+
+## Frontmatter Fields
+
+| Field | Usage |
+|---|---|
+| `name` | lowercase-with-hyphens, becomes the `/name` invocation |
+| `description` | when the agent should delegate to this subagent — be specific |
+| `model` | `fast` for mechanical tasks (build, test, verify), `inherit` for reasoning tasks |
+| `is_background` | `true` only if the task genuinely benefits from running while other work continues |
+
+## Subagent File Structure
+```markdown
+---
+name: subagent-name
+description: Specific description of when to use this subagent.
+model: fast | inherit
+is_background: true | false
+---
+
+One sentence role statement.
+
+# [Domain-specific context if needed]
+
+# Process
+
+Numbered steps the subagent follows.
+
+# Output Format
+
+Explicit structure for what the subagent reports back.
+
+# When to Stop
+
+Conditions under which the subagent stops and surfaces a blocker rather than proceeding.
+```
+
+## Subagent Content Standards
+- Always include a "When to Stop" section — subagents must know when to escalate rather than improvise
+- Always include `direnv exec .` prefix for any build or test commands
+- Keep prompts concise — long prompts dilute focus, not add capability
+- Include HFT-specific considerations (latency, risk, replay) only when directly relevant to the subagent's task
+
+---
+
+# General Standards Across All Artifacts
+
+- **Version control everything** — all artifacts live in `~/dotfiles/cursor/` and are committed
+- **Update when the codebase changes** — when an architectural migration completes, update relevant rules to reflect the new baseline
+- **Prefer updating over creating** — before creating a new artifact, check if an existing one should be extended
+- **Test by using** — after creating a new artifact, use it in a real session and refine based on observed behavior

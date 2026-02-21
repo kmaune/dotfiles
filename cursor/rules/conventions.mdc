@@ -1,0 +1,92 @@
+---
+description: C++ coding conventions, architecture patterns, and migration direction for the Delta One codebase
+globs: "**/*.cpp,**/*.h,**/*.hpp"
+alwaysApply: false
+---
+
+# Naming & Style
+
+| Element | Convention | Example |
+|---|---|---|
+| Member variables | `mPascalCase` (m-prefix) | `mOrderId`, `mFillPrice` |
+| Classes / Types | `PascalCase` | `FillSnooper`, `PositionServer` |
+| Functions / Methods | `PascalCase` | `GetPosition()`, `AddListener()` |
+| Local variables | `camelCase` | `fillPrice`, `orderId` |
+| Constants | `UPPER_SNAKE_CASE` or `constexpr` inline | `MAX_ORDER_SIZE` |
+| Namespaces | `d1::component` | `d1::common`, `d1::ats`, `d1::common::cme` |
+
+# Formatting
+
+- LLVM-based style with **Allman braces** (braces on their own lines)
+- 120 column limit
+- 2-space indentation, no tabs
+- Includes sorted: system headers → third-party → project headers
+
+# Architecture Patterns
+
+## Chassis Pattern
+Dependency management through abstract interface + concrete implementation + simulation variant.
+Use for any component that touches infrastructure (time, networking, I/O).
+
+```cpp
+class ITimeProviderChassis {
+public:
+  virtual ITimeProvider const& GetSystemTimeProvider() const = 0;
+  virtual ~ITimeProviderChassis() = default;
+};
+
+class TimeProviderChassis final : public ITimeProviderChassis { /* ... */ };
+class SimulationTimeProviderChassis final : public ITimeProviderChassis { /* ... */ };
+```
+
+## Strong Typedefs
+Prevent mixing conceptually different types. Use for any ID, price, quantity, or domain primitive.
+
+```cpp
+using BlackedgeInstrumentId = StrongTypedef<struct BlackedgeInstrumentIdType, int64_t>;
+using CmeSecurityId = StrongTypedef<struct CmeSecurityIdType, int32_t>;
+```
+
+## Listener / Observer Pattern
+Components register listeners for events rather than holding direct references.
+
+```cpp
+std::vector<IFillSnooperMessageListener*> listeners;
+dayOrderManager->AddListener(perimeterLimitTracker.get());
+```
+
+# Error Handling
+
+- **Fail hard** on invariant violations — throw exceptions, do not return error codes
+- Use `std::format` for exception messages with context
+- Log extensively around state transitions
+
+# Simple Design Principles
+
+1. **Runs all tests** — correctness is non-negotiable
+2. **Expresses intent clearly** — code should be readable as documentation
+3. **No duplication** — DRY, but don't over-abstract prematurely
+4. **Minimal elements** — remove anything that doesn't earn its complexity
+
+# Migration Direction
+
+The codebase is moving toward clean infrastructure/application separation.
+
+## Dependency Injection & Factory Patterns (In Progress)
+- Components constructed via factories, dependencies injected rather than created internally
+- Enables testability through dependency substitution
+
+## Service / Application Architecture (Future Goal)
+- **Service layer (infrastructure):** config parsing, event loop, message dispatch, logging, networking, lifecycle
+- **Application layer (business logic):** pure business logic, stateless w.r.t. infrastructure, all external deps injected
+
+## Principles for New Code
+- **Separate concerns** — business logic should not directly create infrastructure
+- **Design for injection** — accept dependencies via constructor/interface
+- **Testability first** — testable with mocks/stubs without special test-only code paths
+- **Forward compatibility** — avoid global state and tight coupling to infrastructure
+
+## When Refactoring Existing Code
+- Prefer incremental changes that move toward the goal architecture
+- Maintain backwards compatibility during migration
+- Ask: does this change make future migration easier or harder?
