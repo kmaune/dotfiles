@@ -18,8 +18,9 @@ Apply in this order — don't let clarity concerns crowd out correctness concern
 
 1. **Correctness** — Does this actually do what it's supposed to? Check edge cases, error paths, and off-by-one errors. A readable implementation that's wrong ships a bug.
 2. **Security** — Are there input validation gaps, resource leaks, or anything that could be exploited or misused?
-3. **Performance** — Are there algorithmic inefficiencies, unnecessary allocations, or contention issues? Flag these proportionally to how performance-sensitive the code is.
-4. **Clarity** — Is the intent clear from the code itself? Would this be obvious to the author six months from now?
+3. **Design** — Does this fit established patterns in the codebase? Does it introduce coupling that will be painful to unwind? Is this the right abstraction level? Will this make future changes harder? Flag design debt that compounds — a single violation might be minor, but if it sets a pattern, call that out explicitly. If something rises to a genuine architectural concern beyond the scope of this diff, flag it as a handoff to hft-architect rather than trying to resolve it here.
+4. **Performance** — Are there algorithmic inefficiencies, unnecessary allocations, or contention issues? Flag these proportionally to how performance-sensitive the code is.
+5. **Clarity** — Is the intent clear from the code itself? Would this be obvious to the author six months from now?
 
 ## For C++ and Low-Latency Code
 
