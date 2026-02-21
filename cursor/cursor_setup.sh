@@ -32,54 +32,7 @@ else
   echo "  ✓ $CORE/.cursor -> $DOTFILES_CURSOR"
 fi
 
-# ── 3. Add gwt function to shell rc ──────────────────────────────────────────
-
-GWT_FUNC=$(cat <<'EOF'
-
-# Cursor-aware git worktree add
-# Usage: gwt <folder-name> <branch>
-# Example: gwt feature_1 feature/my-feature
-function gwt() {
-  if [ -z "${1:-}" ] || [ -z "${2:-}" ]; then
-    echo "Usage: gwt <folder-name> <branch>"
-    return 1
-  fi
-
-  local worktree_path="$HOME/$1"
-  local branch="$2"
-
-  git -C "$HOME/core" worktree add "$worktree_path" "$branch"
-
-  if [ -e "$worktree_path/.cursor" ] && [ ! -L "$worktree_path/.cursor" ]; then
-    echo "Warning: $worktree_path/.cursor exists and is not a symlink — skipping symlink"
-    return 1
-  fi
-
-  ln -sf "$HOME/dotfiles/cursor" "$worktree_path/.cursor"
-  echo "✓ Worktree created: $worktree_path"
-  echo "✓ .cursor symlinked: $worktree_path/.cursor -> $HOME/dotfiles/cursor"
-}
-EOF
-)
-
-# Detect shell rc file
-if [ -f "$HOME/.zshrc" ]; then
-  RC_FILE="$HOME/.zshrc"
-elif [ -f "$HOME/.bashrc" ]; then
-  RC_FILE="$HOME/.bashrc"
-else
-  echo "  ✗ Could not detect .zshrc or .bashrc — add gwt manually"
-  exit 1
-fi
-
-if grep -q "function gwt" "$RC_FILE"; then
-  echo "→ gwt function already exists in $RC_FILE, skipping"
-else
-  echo "$GWT_FUNC" >> "$RC_FILE"
-  echo "→ gwt function added to $RC_FILE"
-fi
-
-# ── 4. Symlink existing worktrees ─────────────────────────────────────────────
+# ── 3. Symlink existing worktrees ─────────────────────────────────────────────
 
 echo "→ Checking existing worktrees for missing .cursor symlinks..."
 
@@ -99,7 +52,7 @@ git -C "$CORE" worktree list --porcelain \
       fi
     done
 
-# ── 5. Summary ────────────────────────────────────────────────────────────────
+# ── 4. Summary ────────────────────────────────────────────────────────────────
 
 echo ""
 echo "Setup complete."
@@ -109,6 +62,5 @@ echo "  1. Copy your rule, command, and agent files into:"
 echo "       $DOTFILES_CURSOR/rules/"
 echo "       $DOTFILES_CURSOR/commands/"
 echo "       $DOTFILES_CURSOR/agents/"
-echo "  2. Reload your shell:  source $RC_FILE"
-echo "  3. Commit dotfiles:    cd ~/dotfiles && git add cursor/ && git commit -m 'Add Cursor config'"
-echo "  4. Future worktrees:   gwt <folder-name> <branch>"
+echo "  2. Commit dotfiles:    cd ~/dotfiles && git add cursor/ && git commit -m 'Add Cursor config'"
+echo "  3. New worktrees:      ln -s ~/dotfiles/cursor <worktree>/.cursor"
