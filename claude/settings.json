@@ -1,26 +1,22 @@
 {
   "permissions": {
     "allow": [
-      "File_read",
-      "File_write",
       "Bash",
-      "Grep",
-      "Glob",
-      "Git",
       "Edit",
-      "Multi_edit",
+      "Glob",
+      "Grep",
+      "LS",
+      "MultiEdit",
       "Read",
-      "Write",
-      "Ls",
-      "Web_fetch",
-      "Web_search"
+      "WebFetch",
+      "WebSearch",
+      "Write"
     ]
   },
   "statusLine": {
     "type": "command",
     "command": "~/.claude/statusline.sh"
   },
-  "alwaysThinkingEnabled": false,
   "ignorePatterns": [
     "**/build/**",
     "**/cmake-build-*/**",
