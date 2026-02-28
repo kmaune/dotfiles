@@ -1,3 +1,4 @@
+tap "anomalyco/tap"
 # Bourne-Again SHell, a UNIX command interpreter
 brew "bash"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -26,8 +27,8 @@ brew "ripgrep"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Menu bar manager
-cask "jordanbaird-ice"
+# The AI coding agent built for the terminal.
+brew "anomalyco/tap/opencode"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
 vscode "anysphere.cursorpyright"
