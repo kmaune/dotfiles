@@ -1,0 +1,628 @@
+2026-03-29T15:06:47.198Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (17.6ms): security find-generic-password -a $USER -w -s "Claude Code"
+2026-03-29T15:06:47.217Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (18.4ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:47.232Z [DEBUG] Watching for changes in setting files /Users/kmaune/.claude...
+2026-03-29T15:06:47.254Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-03-29T15:06:47.254Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-03-29T15:06:47.254Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-03-29T15:06:47.255Z [DEBUG] Applying permission update: Adding 10 allow rule(s) to destination 'userSettings': ["Bash","Edit","Glob","Grep","LS","MultiEdit","Read","WebFetch","WebSearch","Write"]
+2026-03-29T15:06:47.256Z [DEBUG] LSP server manager initialized successfully
+2026-03-29T15:06:47.256Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-03-29T15:06:47.256Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-03-29T15:06:47.259Z [DEBUG] Stats cache does not exist, returning empty cache
+2026-03-29T15:06:47.259Z [DEBUG] Stats cache empty, processing all historical data in background
+2026-03-29T15:06:47.261Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kmaune/.claude/skills, project=[]
+2026-03-29T15:06:47.352Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (88.8ms): ps aux | grep -E "Visual Studio Code|Code Helper|Cursor Helper|Windsurf Helper|IntelliJ IDEA|PyCharm
+2026-03-29T15:06:47.353Z [DEBUG] installed_plugins.json doesn't exist, returning empty V2 object
+2026-03-29T15:06:47.371Z [DEBUG] Creating shell snapshot for zsh (/bin/zsh)
+2026-03-29T15:06:47.371Z [DEBUG] Looking for shell config file: /Users/kmaune/.zshrc
+2026-03-29T15:06:47.371Z [DEBUG] Snapshots directory: /Users/kmaune/.claude/shell-snapshots
+2026-03-29T15:06:47.372Z [DEBUG] Creating snapshot at: /Users/kmaune/.claude/shell-snapshots/snapshot-zsh-1774796807371-95zl1a.sh
+2026-03-29T15:06:47.372Z [DEBUG] Shell binary exists: true
+2026-03-29T15:06:47.372Z [DEBUG] Execution timeout: 10000ms
+2026-03-29T15:06:47.372Z [DEBUG] Writing to temp file: /Users/kmaune/.claude/todos/310ecd18-ad1b-4480-9102-beab1822f699-agent-310ecd18-ad1b-4480-9102-beab1822f699.json.tmp.71469.1774796807372
+2026-03-29T15:06:47.380Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (7.7ms)
+2026-03-29T15:06:47.380Z [DEBUG] Temp file written successfully, size: 2 bytes
+2026-03-29T15:06:47.380Z [DEBUG] Renaming /Users/kmaune/.claude/todos/310ecd18-ad1b-4480-9102-beab1822f699-agent-310ecd18-ad1b-4480-9102-beab1822f699.json.tmp.71469.1774796807372 to /Users/kmaune/.claude/todos/310ecd18-ad1b-4480-9102-beab1822f699-agent-310ecd18-ad1b-4480-9102-beab1822f699.json
+2026-03-29T15:06:47.380Z [DEBUG] File /Users/kmaune/.claude/todos/310ecd18-ad1b-4480-9102-beab1822f699-agent-310ecd18-ad1b-4480-9102-beab1822f699.json written atomically
+2026-03-29T15:06:47.386Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-03-29T15:06:47.386Z [DEBUG] Total plugin skills loaded: 0
+2026-03-29T15:06:47.386Z [DEBUG] Total plugin commands loaded: 0
+2026-03-29T15:06:47.386Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-03-29T15:06:47.390Z [DEBUG] Loaded 4 unique skills (managed: 0, user: 4, project: 0, legacy commands: 0)
+2026-03-29T15:06:47.390Z [DEBUG] getSkills returning: 4 skill dir commands, 0 plugin skills
+2026-03-29T15:06:47.395Z [DEBUG] Git remote URL: git@github.com:kmaune/ai_tool_proejcts.git
+2026-03-29T15:06:47.395Z [DEBUG] Parsed repository: kmaune/ai_tool_proejcts from git@github.com:kmaune/ai_tool_proejcts.git
+2026-03-29T15:06:47.395Z [DEBUG] Parsed repository: kmaune/ai_tool_proejcts from URL: git@github.com:kmaune/ai_tool_proejcts.git
+2026-03-29T15:06:47.397Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807397
+2026-03-29T15:06:47.397Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.402Z [DEBUG] Temp file written successfully, size: 18909 bytes
+2026-03-29T15:06:47.402Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.402Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807397 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.402Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.403Z [DEBUG] Added /Users/kmaune/Desktop/coding/ai_tool_tests to tracked paths for repo kmaune/ai_tool_proejcts
+2026-03-29T15:06:47.438Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.6ms)
+2026-03-29T15:06:47.438Z [DEBUG] Stats cache saved successfully (lastComputedDate: 2026-03-28)
+2026-03-29T15:06:47.438Z [DEBUG] Stats cache updated with 3 sessions
+2026-03-29T15:06:47.468Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/vendor/ripgrep/arm64-darwin/rg)
+2026-03-29T15:06:47.485Z [DEBUG] Total plugin agents loaded: 0
+2026-03-29T15:06:47.504Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807504
+2026-03-29T15:06:47.504Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.511Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (6.5ms)
+2026-03-29T15:06:47.511Z [DEBUG] Temp file written successfully, size: 206889 bytes
+2026-03-29T15:06:47.511Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.511Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807504 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.511Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.516Z [ERROR] AxiosError: AxiosError: Request failed with status code 401
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at Unzip.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at Unzip.emit (node:events:520:22)
+    at Unzip.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async UT2 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1845:3609)
+2026-03-29T15:06:47.520Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807520
+2026-03-29T15:06:47.520Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.524Z [DEBUG] Temp file written successfully, size: 206890 bytes
+2026-03-29T15:06:47.524Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.524Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807520 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.525Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.529Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807529
+2026-03-29T15:06:47.529Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.534Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.4ms)
+2026-03-29T15:06:47.534Z [DEBUG] Temp file written successfully, size: 206890 bytes
+2026-03-29T15:06:47.534Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.534Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807529 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.534Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.539Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807539
+2026-03-29T15:06:47.539Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.544Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.5ms)
+2026-03-29T15:06:47.544Z [DEBUG] Temp file written successfully, size: 206884 bytes
+2026-03-29T15:06:47.544Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.544Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807539 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.544Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.547Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807547
+2026-03-29T15:06:47.547Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.552Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.6ms)
+2026-03-29T15:06:47.552Z [DEBUG] Temp file written successfully, size: 206885 bytes
+2026-03-29T15:06:47.552Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.552Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807547 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.552Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.559Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807559
+2026-03-29T15:06:47.559Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.565Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (6.0ms)
+2026-03-29T15:06:47.565Z [DEBUG] Temp file written successfully, size: 206885 bytes
+2026-03-29T15:06:47.565Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.565Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807559 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.565Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.675Z [DEBUG] Failed to fetch Grove notice config: AxiosError: Request failed with status code 401
+2026-03-29T15:06:47.699Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (23.2ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:47.707Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-03-29T15:06:47.710Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807710
+2026-03-29T15:06:47.710Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.714Z [DEBUG] Temp file written successfully, size: 206885 bytes
+2026-03-29T15:06:47.714Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.714Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807710 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.714Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.718Z [DEBUG] Getting matching hook commands for SessionStart with query: startup
+2026-03-29T15:06:47.718Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:06:47.718Z [DEBUG] Matched 0 unique hooks for query "startup" (0 before deduplication)
+2026-03-29T15:06:47.722Z [DEBUG] Skills and commands included in Skill tool:
+2026-03-29T15:06:47.741Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (17.7ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:47.768Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807768
+2026-03-29T15:06:47.768Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.774Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.5ms)
+2026-03-29T15:06:47.774Z [DEBUG] Temp file written successfully, size: 206812 bytes
+2026-03-29T15:06:47.774Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.774Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807768 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.774Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.779Z [DEBUG] Official marketplace auto-install skipped: already_attempted
+2026-03-29T15:06:47.779Z [DEBUG] performStartupChecks called
+2026-03-29T15:06:47.780Z [DEBUG] Starting background plugin installations
+2026-03-29T15:06:47.780Z [DEBUG] performBackgroundPluginInstallations called
+2026-03-29T15:06:47.783Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2026-03-29T15:06:47.784Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807784
+2026-03-29T15:06:47.784Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.789Z [DEBUG] Temp file written successfully, size: 206813 bytes
+2026-03-29T15:06:47.789Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.789Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807784 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.789Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.792Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807792
+2026-03-29T15:06:47.792Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.797Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.1ms)
+2026-03-29T15:06:47.797Z [DEBUG] Temp file written successfully, size: 206886 bytes
+2026-03-29T15:06:47.797Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.797Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807792 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.797Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.799Z [DEBUG] Setting installation status: 0 marketplaces, 0 installable plugins, 0 uninstallable plugins
+2026-03-29T15:06:47.799Z [DEBUG] Loaded plugins - Enabled: 0, Disabled: 0, Commands: 0, Agents: 0, Errors: 0
+2026-03-29T15:06:47.808Z [DEBUG] Getting matching hook commands for SubagentStart with query: Explore
+2026-03-29T15:06:47.808Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:06:47.808Z [DEBUG] Matched 0 unique hooks for query "Explore" (0 before deduplication)
+2026-03-29T15:06:47.810Z [DEBUG] Getting matching hook commands for SubagentStart with query: Plan
+2026-03-29T15:06:47.810Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:06:47.810Z [DEBUG] Matched 0 unique hooks for query "Plan" (0 before deduplication)
+2026-03-29T15:06:47.820Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807820
+2026-03-29T15:06:47.820Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.825Z [DEBUG] Temp file written successfully, size: 207067 bytes
+2026-03-29T15:06:47.825Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.825Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807820 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.825Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.828Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796807828
+2026-03-29T15:06:47.828Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:47.833Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.3ms)
+2026-03-29T15:06:47.833Z [DEBUG] Temp file written successfully, size: 207067 bytes
+2026-03-29T15:06:47.833Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:47.833Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796807828 to /Users/kmaune/.claude.json
+2026-03-29T15:06:47.833Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:47.871Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (17.3ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:47.891Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (18.3ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:47.915Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (16.0ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:48.005Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (18.4ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:48.015Z [DEBUG] Shell snapshot created successfully (6656 bytes)
+2026-03-29T15:06:48.096Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async EX5 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:4439)
+    at async JY2 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:4685)
+2026-03-29T15:06:48.373Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2026-03-29T15:06:48.373Z [DEBUG] AutoUpdater: Using global update method
+2026-03-29T15:06:48.954Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (28.7ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:48.980Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (23.6ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:49.086Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:1417)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:06:49.213Z [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaaYJqymMfddWCAT74P"}
+2026-03-29T15:06:49.235Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (22.3ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:49.258Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (21.2ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:49.311Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (23.3ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:49.351Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:06:49.647Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (27.8ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:49.674Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (25.1ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:49.678Z [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaaZoPkVHoWLBpXNA4A"}
+2026-03-29T15:06:49.679Z [ERROR] Error: Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaaZoPkVHoWLBpXNA4A"}
+    at F9.generate (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:510:11086)
+    at OT.makeStatusError (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:2195)
+    at OT.makeRequest (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:5420)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async SW9.d71.model (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6345)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19540)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:06:49.696Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2026-03-29T15:06:49.696Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:06:49.696Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-29T15:06:49.787Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:1417)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3557
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async Cd (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3528)
+2026-03-29T15:06:49.817Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (19.6ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:49.842Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (19.0ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:49.889Z [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaabHgxdmr55ZieS8TJ"}
+2026-03-29T15:06:49.908Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (18.6ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:49.941Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:4130
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2262
+    at async gT3 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:16947)
+    at async bmB (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2195)
+    at async RyA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2161:52)
+2026-03-29T15:06:50.076Z [ERROR] Error: Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaac5ZeMJGVNkcpNzYL"}
+    at F9.generate (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:510:11086)
+    at OT.makeStatusError (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:2195)
+    at OT.makeRequest (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:5420)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:4211
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2262
+    at async gT3 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:16947)
+    at async bmB (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2195)
+    at async RyA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2161:52)
+    at async _yA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2161:261)
+2026-03-29T15:06:50.098Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (21.4ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:50.124Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (20.3ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:50.213Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async dmB (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:4757)
+    at async RyA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2161:95)
+    at async _yA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2161:261)
+    at async py2 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:2171:530)
+2026-03-29T15:06:50.514Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796810514
+2026-03-29T15:06:50.514Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:50.540Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (25.3ms)
+2026-03-29T15:06:50.540Z [DEBUG] Temp file written successfully, size: 207067 bytes
+2026-03-29T15:06:50.540Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:50.540Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796810514 to /Users/kmaune/.claude.json
+2026-03-29T15:06:50.540Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:50.997Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (238.9ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:51.029Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (22.0ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:51.115Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:1417)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:06:51.332Z [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaagwkpRSpPJqbLd6CY"}
+2026-03-29T15:06:51.352Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (19.2ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:51.375Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (16.1ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:51.453Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:06:51.551Z [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaaiRZBBG6QFNEeQ3xz"}
+2026-03-29T15:06:51.551Z [ERROR] Error: Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaaiRZBBG6QFNEeQ3xz"}
+    at F9.generate (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:510:11086)
+    at OT.makeStatusError (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:2195)
+    at OT.makeRequest (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:5420)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async SW9.d71.model (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6345)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19540)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:06:51.567Z [DEBUG] Getting matching hook commands for SubagentStop with query: undefined
+2026-03-29T15:06:51.567Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:06:51.567Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-29T15:06:51.856Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (18.8ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:51.890Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (26.4ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:51.968Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3557
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async Cd (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3528)
+2026-03-29T15:06:52.064Z [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaakaYEVj2EHFtTZDJq"}
+2026-03-29T15:06:52.064Z [ERROR] Error: Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXaakaYEVj2EHFtTZDJq"}
+    at F9.generate (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:510:11086)
+    at OT.makeStatusError (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:2195)
+    at OT.makeRequest (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:5420)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async SW9.d71.model (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6345)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19540)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3557
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async Cd (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3528)
+2026-03-29T15:06:55.807Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.1ms)
+2026-03-29T15:06:55.808Z [DEBUG] Metadata string for statusline:
+2026-03-29T15:06:55.808Z [DEBUG] <command-message>statusline</command-message>
+<command-name>/statusline</command-name>
+2026-03-29T15:06:55.808Z [DEBUG] command-message tags in metadata: 1
+2026-03-29T15:06:55.816Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-29T15:06:55.816Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-29T15:06:55.816Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-29T15:06:55.816Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-29T15:06:55.821Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2026-03-29T15:06:55.822Z [DEBUG] processPromptSlashCommand creating 4 messages for statusline
+2026-03-29T15:06:55.822Z [DEBUG] Message 1: <command-message>statusline</command-message>
+<command-name>/statusline</command-name>
+2026-03-29T15:06:55.822Z [DEBUG] Message 2 [META]: [{"type":"text","text":"Create a Task with subagent_type \"statusline-setup\" and the prompt \"Configure my statusLine from my shell PS1 configuration\""}]
+2026-03-29T15:06:55.822Z [DEBUG] Message 3: [ATTACHMENT]
+2026-03-29T15:06:55.822Z [DEBUG] Message 4: [ATTACHMENT]
+2026-03-29T15:06:55.826Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-29T15:06:55.826Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:06:55.826Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-29T15:06:55.828Z [DEBUG] FileHistory: Added snapshot for 61ef63ee-951d-4851-8288-20a7d0f7bc94, tracking 0 files
+2026-03-29T15:06:55.829Z [DEBUG] UserCommandMessage rendering: "statusline" (args: "none")
+2026-03-29T15:06:55.829Z [DEBUG] isSkillFormat: false
+2026-03-29T15:06:55.835Z [DEBUG] Total plugin output styles loaded: 0
+2026-03-29T15:06:55.853Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (15.5ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:55.886Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (24.7ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:55.971Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:1417)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:06:56.115Z [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXab3vZyLNw3u2KYEeYQ"}
+2026-03-29T15:06:56.139Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (23.5ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:56.162Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (20.5ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:06:56.164Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2026-03-29T15:06:56.164Z [DEBUG] AutoUpdater: Using global update method
+2026-03-29T15:06:56.245Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:06:56.569Z [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXab4zp2oZx6GeTj7nDa"}
+2026-03-29T15:06:56.569Z [ERROR] Error: Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXab4zp2oZx6GeTj7nDa"}
+    at F9.generate (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:510:11086)
+    at OT.makeStatusError (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:2195)
+    at OT.makeRequest (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:5420)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async SW9.d71.model (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6345)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19540)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:06:56.576Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-29T15:06:56.576Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:06:56.576Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-29T15:06:56.598Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796816598
+2026-03-29T15:06:56.598Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:56.605Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (7.1ms)
+2026-03-29T15:06:56.605Z [DEBUG] Temp file written successfully, size: 207067 bytes
+2026-03-29T15:06:56.605Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:56.605Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796816598 to /Users/kmaune/.claude.json
+2026-03-29T15:06:56.605Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:56.799Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796816799
+2026-03-29T15:06:56.799Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:56.804Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (5.8ms)
+2026-03-29T15:06:56.804Z [DEBUG] Temp file written successfully, size: 207067 bytes
+2026-03-29T15:06:56.805Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:56.805Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796816799 to /Users/kmaune/.claude.json
+2026-03-29T15:06:56.805Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:06:56.809Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796816809
+2026-03-29T15:06:56.809Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:06:56.813Z [DEBUG] Temp file written successfully, size: 207067 bytes
+2026-03-29T15:06:56.813Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:06:56.813Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796816809 to /Users/kmaune/.claude.json
+2026-03-29T15:06:56.814Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:07:08.405Z [DEBUG] AutoUpdaterWrapper: Installation type: npm-global
+2026-03-29T15:07:08.644Z [DEBUG] AutoUpdater: Detected installation type: npm-global
+2026-03-29T15:07:08.644Z [DEBUG] AutoUpdater: Using global update method
+2026-03-29T15:07:09.061Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.71469.1774796829061
+2026-03-29T15:07:09.061Z [DEBUG] Preserving file permissions: 100644
+2026-03-29T15:07:09.068Z [DEBUG] [SLOW OPERATION DETECTED] fs.writeFileSync (7.7ms)
+2026-03-29T15:07:09.068Z [DEBUG] Temp file written successfully, size: 207067 bytes
+2026-03-29T15:07:09.068Z [DEBUG] Applied original permissions to temp file
+2026-03-29T15:07:09.068Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.71469.1774796829061 to /Users/kmaune/.claude.json
+2026-03-29T15:07:09.069Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-03-29T15:07:09.121Z [DEBUG] LSP Diagnostics: getLSPDiagnosticAttachments called
+2026-03-29T15:07:09.121Z [DEBUG] LSP Diagnostics: Checking registry - 0 pending
+2026-03-29T15:07:09.121Z [DEBUG] Hooks: Found 0 total hooks in registry
+2026-03-29T15:07:09.121Z [DEBUG] Hooks: checkForNewResponses returning 0 responses
+2026-03-29T15:07:09.130Z [DEBUG] Getting matching hook commands for UserPromptSubmit with query: undefined
+2026-03-29T15:07:09.130Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:07:09.130Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-29T15:07:09.130Z [DEBUG] FileHistory: Making snapshot for message 6e3a51e3-9e0c-437d-8c0d-d8ddf3840732
+2026-03-29T15:07:09.130Z [DEBUG] FileHistory: Added snapshot for 6e3a51e3-9e0c-437d-8c0d-d8ddf3840732, tracking 0 files
+2026-03-29T15:07:09.365Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (229.7ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:07:09.400Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (22.8ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:07:09.426Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (17.3ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:07:09.537Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:1417)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3557
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async Cd (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3528)
+2026-03-29T15:07:09.684Z [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXac3s8BVMzu4eWRhGaH"}
+2026-03-29T15:07:09.711Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (26.4ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:07:09.735Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (21.0ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:07:10.187Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3557
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async Cd (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3528)
+2026-03-29T15:07:10.283Z [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXac6Wsa7SFYwN2Q2gNG"}
+2026-03-29T15:07:10.284Z [ERROR] Error: Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXac6Wsa7SFYwN2Q2gNG"}
+    at F9.generate (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:510:11086)
+    at OT.makeStatusError (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:2195)
+    at OT.makeRequest (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:5420)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async SW9.d71.model (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6345)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19540)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3557
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async Cd (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3528)
+2026-03-29T15:07:10.286Z [ERROR] SyntaxError: SyntaxError: Expected property name or '}' in JSON at position 1 (line 1 column 2)
+    at JSON.parse (<anonymous>)
+    at file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:75:715
+    at B (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:8:6526)
+    at nmB (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1008:2823)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+2026-03-29T15:07:10.715Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (33.7ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:07:10.736Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (19.3ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:07:10.814Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:1417)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:07:11.317Z [ERROR] Error streaming, falling back to non-streaming mode: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXac9fd97YsJfRfQB3ta"}
+2026-03-29T15:07:11.349Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (31.4ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:07:11.374Z [DEBUG] [SLOW OPERATION DETECTED] execSyncWithDefaults_DEPRECATED (19.9ms): security find-generic-password -a "kmaune" -w -s "Claude Code-credentials"
+2026-03-29T15:07:11.460Z [ERROR] AxiosError: AxiosError: Request failed with status code 400
+    at bx (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:56:1137)
+    at IncomingMessage.<anonymous> (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:57:9852)
+    at IncomingMessage.emit (node:events:520:22)
+    at IncomingMessage.emit (node:domain:489:12)
+    at endReadableNT (node:internal/streams/readable:1729:12)
+    at process.processTicksAndRejections (node:internal/process/task_queues:90:21)
+    at fzA.request (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:59:2130)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async bO1 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:121:4667)
+    at async Vg (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:238:2212)
+    at async oC (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1006:14491)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19523)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:07:11.635Z [ERROR] Error in non-streaming fallback: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXacC2FxRCo1sujrmTnG"}
+2026-03-29T15:07:11.635Z [ERROR] Error: Error: 401 {"type":"error","error":{"type":"authentication_error","message":"OAuth token has expired. Please obtain a new token or refresh your existing token."},"request_id":"req_011CZXacC2FxRCo1sujrmTnG"}
+    at F9.generate (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:510:11086)
+    at OT.makeStatusError (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:2195)
+    at OT.makeRequest (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:857:5420)
+    at process.processTicksAndRejections (node:internal/process/task_queues:104:5)
+    at async SW9.d71.model (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6345)
+    at async d71 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1346:19540)
+    at async SW9 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4593:6499)
+    at async file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3799
+    at async d00 (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:1007:2037)
+    at async zHA (file:///opt/homebrew/lib/node_modules/@anthropic-ai/claude-code/cli.js:4591:3769)
+2026-03-29T15:07:11.650Z [DEBUG] Getting matching hook commands for Stop with query: undefined
+2026-03-29T15:07:11.650Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:07:11.650Z [DEBUG] Matched 0 unique hooks for query "no match query" (0 before deduplication)
+2026-03-29T15:07:15.978Z [DEBUG] Getting matching hook commands for SessionEnd with query: prompt_input_exit
+2026-03-29T15:07:15.978Z [DEBUG] Found 0 hook matchers in settings
+2026-03-29T15:07:15.978Z [DEBUG] Matched 0 unique hooks for query "prompt_input_exit" (0 before deduplication)

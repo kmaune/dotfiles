@@ -1,0 +1,152 @@
+2026-02-21T04:03:02.098Z [DEBUG] Failed to check enabledPlatforms: TypeError: undefined is not an object (evaluating 'mK.join')
+2026-02-21T04:03:02.125Z [DEBUG] [init] configureGlobalMTLS starting
+2026-02-21T04:03:02.125Z [DEBUG] [init] configureGlobalMTLS complete
+2026-02-21T04:03:02.125Z [DEBUG] [init] configureGlobalAgents starting
+2026-02-21T04:03:02.125Z [DEBUG] [init] configureGlobalAgents complete
+2026-02-21T04:03:02.128Z [DEBUG] Applying permission update: Adding 10 allow rule(s) to destination 'userSettings': ["Bash","Edit","Glob","Grep","LS","MultiEdit","Read","WebFetch","WebSearch","Write"]
+2026-02-21T04:03:02.128Z [DEBUG] Applying permission update: Adding 18 allow rule(s) to destination 'localSettings': ["Bash(python:*)","Bash(rm:*)","Bash(true)","Bash(cat:*)","Bash(find:*)","Bash(mkdir:*)","Bash(ls:*)","Bash(grep:*)","Bash(rg:*)","Bash(touch:*)","Bash(mv:*)","Bash(git pull:*)","Bash(git checkout:*)","Bash(git stash:*)","Bash(sed:*)","Bash(cp:*)","Bash(OBSIDIAN_VAULT_PATH=\"/Users/kmaune/Documents/ObsidianVault-Main\" /opt/anaconda3/envs/mcp-servers/bin/python server.py --test)","Bash(timeout:*)"]
+2026-02-21T04:03:02.128Z [DEBUG] [STARTUP] Loading MCP configs...
+2026-02-21T04:03:02.130Z [DEBUG] [ToolSearch:optimistic] mode=standard, ENABLE_TOOL_SEARCH=false, result=false
+2026-02-21T04:03:02.130Z [DEBUG] [STARTUP] Running setup()...
+2026-02-21T04:03:02.132Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kmaune/.claude/skills, project=[]
+2026-02-21T04:03:02.132Z [DEBUG] Error log sink initialized
+2026-02-21T04:03:02.132Z [DEBUG] [STARTUP] setup() completed in 2ms
+2026-02-21T04:03:02.132Z [DEBUG] [STARTUP] Loading commands and agents...
+2026-02-21T04:03:02.134Z [DEBUG] Found 0 plugins (0 enabled, 0 disabled)
+2026-02-21T04:03:02.134Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-02-21T04:03:02.134Z [DEBUG] Total plugin skills loaded: 0
+2026-02-21T04:03:02.134Z [DEBUG] Total plugin commands loaded: 0
+2026-02-21T04:03:02.134Z [DEBUG] Registered 0 hooks from 0 plugins
+2026-02-21T04:03:02.134Z [DEBUG] [claudeai-mcp] Checking gate (cached)...
+2026-02-21T04:03:02.134Z [DEBUG] [claudeai-mcp] Gate returned: true
+2026-02-21T04:03:02.134Z [DEBUG] [claudeai-mcp] Missing user:mcp_servers scope (scopes=user:inference)
+2026-02-21T04:03:02.136Z [DEBUG] Loaded 4 unique skills (4 unconditional, 0 conditional, managed: 0, user: 4, project: 0, additional: 0, legacy commands: 0)
+2026-02-21T04:03:02.136Z [DEBUG] getSkills returning: 4 skill dir commands, 0 plugin skills, 3 bundled skills
+2026-02-21T04:03:02.145Z [DEBUG] Git remote URL: git@github.com:kmaune/mcp-servers.git
+2026-02-21T04:03:02.145Z [DEBUG] Parsed repository: kmaune/mcp-servers from git@github.com:kmaune/mcp-servers.git
+2026-02-21T04:03:02.145Z [DEBUG] Parsed repository: kmaune/mcp-servers from URL: git@github.com:kmaune/mcp-servers.git
+2026-02-21T04:03:02.146Z [DEBUG] Total plugin agents loaded: 0
+2026-02-21T04:03:02.146Z [DEBUG] [STARTUP] Commands and agents loaded in 14ms
+2026-02-21T04:03:02.146Z [DEBUG] [LSP MANAGER] initializeLspServerManager() called
+2026-02-21T04:03:02.146Z [DEBUG] [LSP MANAGER] Created manager instance, state=pending
+2026-02-21T04:03:02.146Z [DEBUG] [LSP MANAGER] Starting async initialization (generation 1)
+2026-02-21T04:03:02.147Z [DEBUG] Total LSP servers loaded: 0
+2026-02-21T04:03:02.147Z [DEBUG] [STARTUP] MCP configs loaded in 19ms
+2026-02-21T04:03:02.168Z [DEBUG] [LSP SERVER MANAGER] getAllLspServers returned 0 server(s)
+2026-02-21T04:03:02.168Z [DEBUG] LSP manager initialized with 0 servers
+2026-02-21T04:03:02.170Z [DEBUG] installed_plugins.json doesn't exist, returning empty V2 object
+2026-02-21T04:03:02.170Z [DEBUG] Initialized versioned plugins system with 0 plugins
+2026-02-21T04:03:02.170Z [DEBUG] LSP server manager initialized successfully
+2026-02-21T04:03:02.170Z [DEBUG] LSP notification handlers registered successfully for all 0 server(s)
+2026-02-21T04:03:02.170Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-02-21T04:03:02.172Z [DEBUG] Watching for changes in setting files /Users/kmaune/.claude/settings.json, /Users/kmaune/Desktop/coding/mcp-servers/.claude/worktrees/jolly-darwin/.claude/settings.json, /Users/kmaune/Desktop/coding/mcp-servers/.claude/worktrees/jolly-darwin/.claude/settings.local.json...
+2026-02-21T04:03:02.176Z [DEBUG] [Perfetto] initializePerfettoTracing called, env value: undefined
+2026-02-21T04:03:02.176Z [DEBUG] [3P telemetry] isTelemetryEnabled=false (CLAUDE_CODE_ENABLE_TELEMETRY=undefined)
+2026-02-21T04:03:02.176Z [DEBUG] Plugin autoupdate: skipped (auto-updater disabled)
+2026-02-21T04:03:02.179Z [DEBUG] Getting matching hook commands for SessionStart with query: resume
+2026-02-21T04:03:02.179Z [DEBUG] Found 0 hook matchers in settings
+2026-02-21T04:03:02.179Z [DEBUG] Matched 0 unique hooks for query "resume" (0 before deduplication)
+2026-02-21T04:03:02.179Z [DEBUG] [FileIndex] getProjectFiles called, respectGitignore=true
+2026-02-21T04:03:02.179Z [DEBUG] [FileIndex] getFilesUsingGit called
+2026-02-21T04:03:02.182Z [DEBUG] installPluginsForHeadless: starting
+2026-02-21T04:03:02.182Z [DEBUG] Found 0 installed plugins (V2 format)
+2026-02-21T04:03:02.182Z [DEBUG] installPluginsForHeadless: no missing plugins or marketplaces configured
+2026-02-21T04:03:02.183Z [DEBUG] Fetching plugin security messages from https://raw.githubusercontent.com/anthropics/claude-plugins-official/refs/heads/security/security.json
+2026-02-21T04:03:02.184Z [DEBUG] Watching for changes in skill/command directories: /Users/kmaune/.claude/skills...
+2026-02-21T04:03:02.186Z [DEBUG] Total plugin output styles loaded: 0
+2026-02-21T04:03:02.186Z [DEBUG] Fast mode unavailable: Fast mode is not available in the Agent SDK
+2026-02-21T04:03:02.195Z [DEBUG] [FileIndex] git ls-files (tracked) took 16ms
+2026-02-21T04:03:02.195Z [DEBUG] [FileIndex] git ls-files: 50 tracked files in 16ms
+2026-02-21T04:03:02.195Z [DEBUG] [FileIndex] using git ls-files result (50 files)
+2026-02-21T04:03:02.526Z [DEBUG] [FileIndex] cache refresh completed in 347ms (rust index)
+2026-02-21T04:03:02.538Z [ERROR] "AxiosError: Error\n    at Fj (/$bunfs/root/claude:92:1144)\n    at <anonymous> (/$bunfs/root/claude:93:10097)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:861:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:95:2149)\n    at processTicksAndRejections (native:7:39)"
+2026-02-21T04:03:02.538Z [ERROR] "AxiosError: Error\n    at Fj (/$bunfs/root/claude:92:1144)\n    at <anonymous> (/$bunfs/root/claude:93:10097)\n    at emit (node:events:92:22)\n    at endReadableNT (internal:streams/readable:861:50)\n    at processTicksAndRejections (native:7:39)\n    at request (/$bunfs/root/claude:95:2149)\n    at processTicksAndRejections (native:7:39)"
+2026-02-21T04:03:02.539Z [DEBUG] Failed to fetch org fast mode status, defaulting to disabled
+2026-02-21T04:03:02.544Z [DEBUG] [FileIndex] background untracked fetch: 0 files
+2026-02-21T04:03:02.550Z [DEBUG] Security messages saved successfully
+2026-02-21T04:03:02.672Z [DEBUG] Ripgrep first use test: PASSED (mode=builtin, path=/Users/kmaune/Library/Application Support/Claude/claude-code/2.1.49/claude)
+2026-02-21T04:13:02.183Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.30891.1771647182183
+2026-02-21T04:13:02.183Z [DEBUG] Preserving file permissions: 100644
+2026-02-21T04:13:02.183Z [DEBUG] Temp file written successfully, size: 17995 bytes
+2026-02-21T04:13:02.183Z [DEBUG] Applied original permissions to temp file
+2026-02-21T04:13:02.183Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.30891.1771647182183 to /Users/kmaune/.claude.json
+2026-02-21T04:13:02.184Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-02-21T10:42:33.865Z [ERROR] Failed to save config with lock: Error: Lock file is already being held
+2026-02-21T10:42:33.866Z [DEBUG] Writing to temp file: /Users/kmaune/.claude.json.tmp.30891.1771670553866
+2026-02-21T10:42:33.866Z [DEBUG] Preserving file permissions: 100644
+2026-02-21T10:42:33.867Z [DEBUG] Temp file written successfully, size: 18034 bytes
+2026-02-21T10:42:33.867Z [DEBUG] Applied original permissions to temp file
+2026-02-21T10:42:33.867Z [DEBUG] Renaming /Users/kmaune/.claude.json.tmp.30891.1771670553866 to /Users/kmaune/.claude.json
+2026-02-21T10:42:33.868Z [DEBUG] File /Users/kmaune/.claude.json written atomically
+2026-02-21T22:52:09.394Z [DEBUG] Detected skill change: /Users/kmaune/.claude/skills/init-project/SKILL.md
+2026-02-21T22:52:09.396Z [DEBUG] Getting matching hook commands for ConfigChange with query: skills
+2026-02-21T22:52:09.396Z [DEBUG] Found 0 hook matchers in settings
+2026-02-21T22:52:09.396Z [DEBUG] Matched 0 unique hooks for query "skills" (0 before deduplication)
+2026-02-21T22:52:09.396Z [DEBUG] Detected skill change: /Users/kmaune/.claude/skills/review-pr/SKILL.md
+2026-02-21T22:52:09.396Z [DEBUG] Getting matching hook commands for ConfigChange with query: skills
+2026-02-21T22:52:09.396Z [DEBUG] Found 0 hook matchers in settings
+2026-02-21T22:52:09.396Z [DEBUG] Matched 0 unique hooks for query "skills" (0 before deduplication)
+2026-02-21T22:52:09.396Z [DEBUG] Detected skill change: /Users/kmaune/.claude/skills/review/SKILL.md
+2026-02-21T22:52:09.397Z [DEBUG] Getting matching hook commands for ConfigChange with query: skills
+2026-02-21T22:52:09.397Z [DEBUG] Found 0 hook matchers in settings
+2026-02-21T22:52:09.397Z [DEBUG] Matched 0 unique hooks for query "skills" (0 before deduplication)
+2026-02-21T22:52:09.397Z [DEBUG] Detected skill change: /Users/kmaune/.claude/skills/worktree/SKILL.md
+2026-02-21T22:52:09.397Z [DEBUG] Getting matching hook commands for ConfigChange with query: skills
+2026-02-21T22:52:09.397Z [DEBUG] Found 0 hook matchers in settings
+2026-02-21T22:52:09.397Z [DEBUG] Matched 0 unique hooks for query "skills" (0 before deduplication)
+2026-02-21T22:52:09.398Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kmaune/.claude/skills, project=[]
+2026-02-21T22:52:09.398Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kmaune/.claude/skills, project=[]
+2026-02-21T22:52:09.398Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kmaune/.claude/skills, project=[]
+2026-02-21T22:52:09.398Z [DEBUG] Loading skills from: managed=/Library/Application Support/ClaudeCode/.claude/skills, user=/Users/kmaune/.claude/skills, project=[]
+2026-02-21T22:52:09.398Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-02-21T22:52:09.398Z [DEBUG] Total plugin skills loaded: 0
+2026-02-21T22:52:09.398Z [DEBUG] Total plugin commands loaded: 0
+2026-02-21T22:52:09.398Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-02-21T22:52:09.398Z [DEBUG] Total plugin skills loaded: 0
+2026-02-21T22:52:09.398Z [DEBUG] Total plugin commands loaded: 0
+2026-02-21T22:52:09.398Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-02-21T22:52:09.398Z [DEBUG] Total plugin skills loaded: 0
+2026-02-21T22:52:09.398Z [DEBUG] Total plugin commands loaded: 0
+2026-02-21T22:52:09.398Z [DEBUG] getPluginSkills: Processing 0 enabled plugins
+2026-02-21T22:52:09.398Z [DEBUG] Total plugin skills loaded: 0
+2026-02-21T22:52:09.398Z [DEBUG] Total plugin commands loaded: 0
+2026-02-21T22:52:09.400Z [DEBUG] Loaded 4 unique skills (4 unconditional, 0 conditional, managed: 0, user: 0, project: 0, additional: 0, legacy commands: 4)
+2026-02-21T22:52:09.400Z [DEBUG] Loaded 4 unique skills (4 unconditional, 0 conditional, managed: 0, user: 0, project: 0, additional: 0, legacy commands: 4)
+2026-02-21T22:52:09.400Z [DEBUG] Loaded 4 unique skills (4 unconditional, 0 conditional, managed: 0, user: 0, project: 0, additional: 0, legacy commands: 4)
+2026-02-21T22:52:09.400Z [DEBUG] Loaded 4 unique skills (4 unconditional, 0 conditional, managed: 0, user: 0, project: 0, additional: 0, legacy commands: 4)
+2026-02-21T22:52:09.400Z [DEBUG] getSkills returning: 4 skill dir commands, 0 plugin skills, 3 bundled skills
+2026-02-21T22:52:09.400Z [DEBUG] getSkills returning: 4 skill dir commands, 0 plugin skills, 3 bundled skills
+2026-02-21T22:52:09.400Z [DEBUG] getSkills returning: 4 skill dir commands, 0 plugin skills, 3 bundled skills
+2026-02-21T22:52:09.400Z [DEBUG] getSkills returning: 4 skill dir commands, 0 plugin skills, 3 bundled skills
+2026-02-21T22:52:10.304Z [DEBUG] Detected change to /Users/kmaune/.claude/settings.json
+2026-02-21T22:52:10.304Z [DEBUG] Getting matching hook commands for ConfigChange with query: user_settings
+2026-02-21T22:52:10.304Z [DEBUG] Found 0 hook matchers in settings
+2026-02-21T22:52:10.304Z [DEBUG] Matched 0 unique hooks for query "user_settings" (0 before deduplication)
+2026-02-21T22:52:10.307Z [DEBUG] Settings changed from userSettings, updating app state
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 0 rule(s): []
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all deny rules for destination 'userSettings' with 0 rule(s): []
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all ask rules for destination 'userSettings' with 0 rule(s): []
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all allow rules for destination 'projectSettings' with 0 rule(s): []
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all deny rules for destination 'projectSettings' with 0 rule(s): []
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all ask rules for destination 'projectSettings' with 0 rule(s): []
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 0 rule(s): []
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all deny rules for destination 'localSettings' with 0 rule(s): []
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all ask rules for destination 'localSettings' with 0 rule(s): []
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 13 rule(s): ["File_read","File_write","Bash","Grep","Glob","Git","Edit","Multi_edit","Read","Write","Ls","Web_fetch","Web_search"]
+2026-02-21T22:52:10.308Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 18 rule(s): ["Bash(python:*)","Bash(rm:*)","Bash(true)","Bash(cat:*)","Bash(find:*)","Bash(mkdir:*)","Bash(ls:*)","Bash(grep:*)","Bash(rg:*)","Bash(touch:*)","Bash(mv:*)","Bash(git pull:*)","Bash(git checkout:*)","Bash(git stash:*)","Bash(sed:*)","Bash(cp:*)","Bash(OBSIDIAN_VAULT_PATH=\"/Users/kmaune/Documents/ObsidianVault-Main\" /opt/anaconda3/envs/mcp-servers/bin/python server.py --test)","Bash(timeout:*)"]
+2026-02-21T22:52:14.182Z [DEBUG] Detected change to /Users/kmaune/.claude/settings.json
+2026-02-21T22:52:14.182Z [DEBUG] Getting matching hook commands for ConfigChange with query: user_settings
+2026-02-21T22:52:14.182Z [DEBUG] Found 0 hook matchers in settings
+2026-02-21T22:52:14.182Z [DEBUG] Matched 0 unique hooks for query "user_settings" (0 before deduplication)
+2026-02-21T22:52:14.185Z [DEBUG] Settings changed from userSettings, updating app state
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 0 rule(s): []
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all deny rules for destination 'userSettings' with 0 rule(s): []
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all ask rules for destination 'userSettings' with 0 rule(s): []
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all allow rules for destination 'projectSettings' with 0 rule(s): []
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all deny rules for destination 'projectSettings' with 0 rule(s): []
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all ask rules for destination 'projectSettings' with 0 rule(s): []
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 0 rule(s): []
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all deny rules for destination 'localSettings' with 0 rule(s): []
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all ask rules for destination 'localSettings' with 0 rule(s): []
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all allow rules for destination 'userSettings' with 10 rule(s): ["Bash","Edit","Glob","Grep","LS","MultiEdit","Read","WebFetch","WebSearch","Write"]
+2026-02-21T22:52:14.186Z [DEBUG] Replacing all allow rules for destination 'localSettings' with 18 rule(s): ["Bash(python:*)","Bash(rm:*)","Bash(true)","Bash(cat:*)","Bash(find:*)","Bash(mkdir:*)","Bash(ls:*)","Bash(grep:*)","Bash(rg:*)","Bash(touch:*)","Bash(mv:*)","Bash(git pull:*)","Bash(git checkout:*)","Bash(git stash:*)","Bash(sed:*)","Bash(cp:*)","Bash(OBSIDIAN_VAULT_PATH=\"/Users/kmaune/Documents/ObsidianVault-Main\" /opt/anaconda3/envs/mcp-servers/bin/python server.py --test)","Bash(timeout:*)"]
