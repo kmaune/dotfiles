@@ -1,35 +1,19 @@
-# Bourne-Again SHell, a UNIX command interpreter
-brew "bash"
-# Clone of cat(1) with syntax highlighting and Git integration
-brew "bat"
-# Cross-platform make
-brew "cmake"
-# Command-line fuzzy finder written in Go
-brew "fzf"
-# GNU debugger
-brew "gdb"
-# C++ microbenchmark support library
+tap "anomalyco/tap"
+
+# C++ testing and benchmarking (project dependencies, not global tools)
 brew "google-benchmark"
-# Google Testing and Mocking Framework
 brew "googletest"
-# Improved top (interactive process viewer)
-brew "htop"
-# Ambitious Vim-fork focused on extensibility and agility
-brew "neovim"
-# Open-source, cross-platform JavaScript runtime environment
+
+# JavaScript runtime (dependency of other tools)
 brew "node"
-# Execute binaries from Python packages in isolated environments
-brew "pipx"
-# Search tool like grep and The Silver Searcher
-brew "ripgrep"
-# Terminal multiplexer
-brew "tmux"
-# Display directories as trees (with optional color/HTML output)
-brew "tree"
-# Menu bar manager
-cask "jordanbaird-ice"
-# Mesh VPN based on WireGuard
+
+# The AI coding agent built for the terminal (not in nixpkgs)
+brew "anomalyco/tap/opencode"
+
+# GUI apps
 cask "tailscale-app"
+
+# VSCode extensions
 vscode "anysphere.cursorpyright"
 vscode "anysphere.remote-ssh"
 vscode "matepek.vscode-catch2-test-adapter"
