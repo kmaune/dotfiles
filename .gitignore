@@ -32,3 +32,15 @@ claude/.update.lock
 
 # temp directories
 _temp/
+
+# Claude runtime/ephemeral state
+claude/backups/
+claude/debug/
+claude/cache/
+claude/history.jsonl
+claude/paste-cache/
+claude/sessions/
+claude/file-history/
+claude/plans/
+claude/.last-cleanup
+claude/mcp-needs-auth-cache.json
