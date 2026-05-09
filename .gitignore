@@ -49,3 +49,4 @@ claude/plugins/install-counts-cache.json
 claude/**/*.json
 !claude/plugins/blocklist.json
 !claude/settings.json
+claude/telemetry/
