@@ -44,3 +44,8 @@ claude/file-history/
 claude/plans/
 claude/.last-cleanup
 claude/mcp-needs-auth-cache.json
+claude/stats-cache.json
+claude/plugins/install-counts-cache.json
+claude/**/*.json
+!claude/plugins/blocklist.json
+!claude/settings.json
