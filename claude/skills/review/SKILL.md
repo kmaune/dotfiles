@@ -1,1 +1,1 @@
-/nix/store/by0yhq3vqxg7shri51w6y81wq59f6xmc-home-manager-files/.claude/skills/review/SKILL.md
+/nix/store/g4aj2bcc00hhkbdbn3kl3bxw0jvv3wwq-home-manager-files/.claude/skills/review/SKILL.md
